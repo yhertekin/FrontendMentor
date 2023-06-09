@@ -1,0 +1,152 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --image-product: url(/images/image-product-desktop.jpg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--cream);
+    height: 100vh;
+}
+
+body,
+.card,
+.card--right,
+.content__price,
+.button--add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card--left {
+    content: var(--image-product);
+    width: 23rem;
+    height: 34.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.card--right {
+    width: 23rem;
+    height: 34.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.8rem;
+    background-color: var(--white);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.header__text {
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.4rem;
+}
+
+.header__title {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    margin: 1.7rem 0;
+}
+
+.content__paragraph {
+    font-family: Montserrat;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    line-height: 1.7rem;
+    font-size: 1rem;
+}
+
+.content__price {
+    margin: 1.7rem 0;
+    justify-content: flex-start;
+}
+
+.price--sale {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--dark-cyan);
+}
+
+.price--real {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    margin-left: 2rem;
+}
+
+.button--add {
+    width: 100%;
+    padding: 1rem;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+.button--add:hover {
+    background-color: var(--very-dark-blue);
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+    :root {
+        --image-product: url(/images/image-product-mobile.jpg);
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card--left {
+        height: auto;
+        border-radius: 0;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    .card--right {
+        height: auto;
+        border-radius: 0;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 1.7rem;
+    }
+    .header__title {
+        margin: 1.3rem 0;
+        font-size: 2rem;
+    }
+    .content__price {
+        margin: 1.3rem 0;
+    }
+    .content__paragraph {
+        font-size: 0.94rem;
+    }
+}
