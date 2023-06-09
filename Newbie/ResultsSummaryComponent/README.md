@@ -4,12 +4,12 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -19,8 +19,8 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 Users should be able to:
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+-   View the optimal layout for the interface depending on their device's screen size
+-   See hover and focus states for all interactive elements on the page
 
 ### Screenshots
 
@@ -29,13 +29,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/ResultsSummaryComponent)
+-   Live Site URL: [Live](https://chic-centaur-24109d.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
