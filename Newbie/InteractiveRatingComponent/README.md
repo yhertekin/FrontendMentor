@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/InteractiveRatingComponent)
--   Live Site URL: [Live]([https://your-live-site-url.com](https://animated-cendol-79d815.netlify.app/))
+-   Live Site URL: [Live](https://animated-cendol-79d815.netlify.app)
 
 ## My process
 
