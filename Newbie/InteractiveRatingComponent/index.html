@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+        <title>Frontend Mentor | Interactive rating component</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+                color: white;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section class="card card--rating">
+                <header class="card__header">
+                    <div class="icon">
+                        <img src="/images/icon-star.svg" alt="star" />
+                    </div>
+                    <h1 class="header__title">How did we do?</h1>
+                </header>
+                <div class="card__content">
+                    <p class="content__text">
+                        Please let us know how we did with your support request. All feedback is appreciated to help us
+                        improve our offering!
+                    </p>
+                    <div class="content__stars">
+                        <span class="star">1</span>
+                        <span class="star">2</span>
+                        <span class="star">3</span>
+                        <span class="star">4</span>
+                        <span class="star">5</span>
+                    </div>
+                </div>
+                <button class="card__button">Submit</button>
+            </section>
+            <section class="card card--thank-you">
+                <header class="card__header">
+                    <img src="/images/illustration-thank-you.svg" alt="thank you" />
+                    <h1 id="selected" class="header__text"></h1>
+                </header>
+                <div class="card__content">
+                    <h1 class="content__title">Thank you!</h1>
+                    <p class="content__text">
+                        We appreciate you taking the time to give a rating. If you ever need more support, don’t
+                        hesitate to get in touch!
+                    </p>
+                </div>
+            </section>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="#">yhertekin</a>.
+            </div>
+        </main>
+
+        <script>
+            const stars = document.querySelectorAll(".star");
+            const cardRating = document.querySelector(".card--rating");
+            const cardThankYou = document.querySelector(".card--thank-you");
+            const button = document.querySelector(".card__button");
+            const selectedText = document.getElementById("selected");
+
+            let selected;
+
+            stars.forEach((star, i) => {
+                star.addEventListener("click", function handleClick(event) {
+                    stars.forEach((s) => s.classList.remove("star--active"));
+                    star.classList.toggle("star--active");
+                    selected = star.innerText;
+                });
+            });
+
+            button.addEventListener("click", () => {
+                if (selected) {
+                    cardRating.style.display = "none";
+                    cardThankYou.style.display = "block";
+                    selectedText.innerText = `You selected ${selected} out of 5`;
+                }
+            });
+        </script>
+    </body>
+</html>
