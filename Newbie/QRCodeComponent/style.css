@@ -1,0 +1,93 @@
+:root {
+	/* Colors */
+	--white: hsl(0, 0%, 100%);
+	--light-gray: hsl(212, 45%, 89%);
+	--grayish-blue: hsl(220, 15%, 55%);
+	--dark-blue: hsl(218, 44%, 22%);
+
+	--font-size: 15px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: var(--font-size);
+}
+
+body {
+	background-color: var(--light-gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: Outfit;
+}
+
+main {
+	padding: 1rem;
+}
+
+.card {
+	background-color: var(--white);
+	padding: 1rem;
+	border-radius: 1rem;
+	width: 17rem;
+}
+
+.card__image {
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+}
+
+.card__title {
+	color: var(--dark-blue);
+	margin: 1rem 0;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.card__text {
+	color: var(--grayish-blue);
+	/* max-width: 17em; */
+}
+
+.card__title,
+.card__text {
+	text-align: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	:root {
+		--font-size: 15px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	:root {
+		--font-size: 17px;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	:root {
+		--font-size: 19px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	:root {
+		--font-size: 21px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	:root {
+		--font-size: 23px;
+	}
+}
