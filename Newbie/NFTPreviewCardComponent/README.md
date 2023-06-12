@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Code](https://your-solution-url.com)
--   Live Site URL: [Live](https://your-live-site-url.com)
+-   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/NFTPreviewCardComponent)
+-   Live Site URL: [Live](https://illustrious-kitten-e4a656.netlify.app/)
 
 ## My process
 
