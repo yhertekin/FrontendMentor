@@ -1,0 +1,144 @@
+:root {
+    /* Colors */
+
+    /* Primary */
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+
+    --very-dark-blue-100: hsl(215, 32%, 27%); /* line */
+    --very-dark-blue-200: hsl(216, 50%, 16%); /* card background */
+    --very-dark-blue-300: hsl(217, 54%, 11%); /* main background */
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+
+    --font-size: 18px;
+
+    /* Animation */
+    --transition-duration: 0.3s;
+
+    /* Radius */
+    --border-radius: 0.3rem;
+}
+
+body {
+    background-color: var(--very-dark-blue-300);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+* {
+    font-size: var(--font-size);
+    font-family: Outfit, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+.card__image__container,
+.card__info,
+.card__price,
+.card__date,
+.card__creator {
+    display: flex;
+    align-items: center;
+}
+
+.card__price > img,
+.card__date > img {
+    margin-right: 0.3rem;
+}
+.card__image__container,
+.card__image__view,
+.card__header,
+.creator__info > span {
+    transition: all var(--transition-duration);
+}
+
+.card__header:hover,
+.creator__info > span:hover,
+.card__price {
+    color: var(--cyan);
+}
+
+main {
+    padding: 1rem;
+}
+
+.card {
+    background-color: var(--very-dark-blue-200);
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 20rem;
+    color: var(--soft-blue);
+}
+
+.card__image__container {
+    position: relative;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration);
+}
+
+.card__image__container:hover {
+    background-color: var(--cyan);
+}
+
+.card__image__container:hover .card__image {
+    opacity: 0.5;
+}
+
+.card__image__container:hover .card__image__view {
+    opacity: 1;
+}
+.card__image__view {
+    position: absolute;
+    left: 42%;
+    top: 43%;
+    opacity: 0;
+}
+.card__image {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.card__header {
+    font-size: 1.4rem;
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+.card__info {
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+.card__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--very-dark-blue-100);
+}
+
+.card__creator {
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.creator__avatar {
+    background-image: url(/images/image-avatar.png);
+    background-size: cover;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.creator__info > span {
+    color: var(--white);
+}
