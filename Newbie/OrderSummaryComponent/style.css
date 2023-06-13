@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+	/* Colors */
+	/* Primary */
+	--white: hsl(0, 0%, 100%);
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	/* Neutral */
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+
+	/* Typography */
+	--font-family: "Red Hat Display", sans-serif;
+	--font-size: 16px;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+	--font-weight-black: 900;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: var(--font-size);
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: var(--font-family);
+	background-image: url(/images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-color: var(--pale-blue);
+	background-size: contain;
+}
+main {
+	padding: 1rem;
+	width: 23rem;
+}
+
+.card {
+	border-radius: 1rem;
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+}
+
+.card__image {
+	width: 100%;
+	height: auto;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+.card__content {
+	padding: 1rem;
+}
+
+.card__header {
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: var(--font-weight-black);
+	color: var(--dark-blue);
+	margin: 1rem 0;
+}
+
+.card__text {
+	text-align: center;
+	line-height: 1.7rem;
+	color: var(--desaturated-blue);
+	padding: 0 1rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.card__plan-section {
+	display: flex;
+	align-items: center;
+	background-color: var(--very-pale-blue);
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.plan-section__plan {
+	margin-left: 1rem;
+}
+
+.plan__title {
+	font-weight: var(--font-weight-bold);
+}
+
+.plan__price {
+	font-weight: var(--font-weight-medium);
+	color: var(--desaturated-blue);
+	margin-top: 3px;
+}
+
+.plan-section__button {
+	text-decoration: underline;
+	color: var(--bright-blue);
+	margin-left: auto;
+}
+.plan-section__button:hover {
+	opacity: 0.7;
+	text-decoration: none;
+}
+
+.card__button {
+	width: 100%;
+	padding: 1rem;
+	border: none;
+	border-radius: 1rem;
+	font-weight: var(--font-weight-bold);
+}
+.card__button--payment {
+	margin-top: 1rem;
+	background-color: var(--bright-blue);
+	color: var(--white);
+	box-shadow: 0px 10px 18px 0px var(--pale-blue);
+}
+
+.card__button--cancel {
+	background: none;
+	color: var(--desaturated-blue);
+}
+
+.card__button--cancel:hover {
+	color: var(--dark-blue);
+	cursor: pointer;
+}
+
+.card__button--payment:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 376px) {
+	body {
+		background-image: url(/images/pattern-background-desktop.svg);
+	}
+	main {
+		width: 28rem;
+	}
+	.card__content {
+		padding: 2rem;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
