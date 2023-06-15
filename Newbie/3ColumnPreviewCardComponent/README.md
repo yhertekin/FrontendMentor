@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/3ColumnPreviewCardComponent)
+- Live Site URL: [Live](https://beamish-bombolone-2635ac.netlify.app/)
 
 ## My process
 
