@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+	/* Colors */
+	/* Primary */
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	/* Neutral */
+	--dark-gray: hsl(0, 0%, 59%);
+	--light-gray: hsla(0, 0%, 45%, 0.2);
+	/* Typography */
+	--font-size: 18px;
+	--font-family: "Kumbh Sans", sans-serif;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: var(--dark-cyan);
+	background-image: url(/images/bg-pattern-top.svg),
+		url(/images/bg-pattern-bottom.svg);
+	background-position: right 52vw bottom 40vh, left 52vw top 40vh;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.card {
+	border-radius: 1rem;
+	text-align: center;
+	position: relative;
+	background-color: white;
+}
+.card__image {
+	border-radius: 1rem 1rem 0 0;
+}
+
+.card__profile-image {
+	position: absolute;
+	border-radius: 50%;
+	border: 5px solid white;
+	inset: 0;
+	margin: 5rem auto 0 auto;
+}
+
+.card__name {
+	margin-top: 4rem;
+	font-size: 1.1rem;
+	font-weight: var(--font-weight-bold);
+	color: var(--very-dark-desaturated-blue);
+}
+.card__name > .card__age {
+	color: var(--dark-gray);
+	font-weight: var(--font-weight-regular);
+}
+
+.card__city {
+	margin-top: 0.4rem;
+	font-size: 0.8rem;
+	font-weight: var(--font-weight-regular);
+	color: var(--dark-gray);
+}
+
+.card__footer {
+	margin-top: 1.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 1.3rem 0;
+	border-top: 1px solid var(--light-gray);
+}
+
+.card__footer__item {
+	text-align: center;
+	color: var(--very-dark-desaturated-blue);
+}
+.item__number {
+	font-weight: var(--font-weight-bold);
+}
+.item__text {
+	font-size: 0.5rem;
+	font-weight: var(--font-weight-regular);
+	letter-spacing: 0.1rem;
+	margin-top: 0.2rem;
+	color: var(--dark-grayish-blue);
+}
