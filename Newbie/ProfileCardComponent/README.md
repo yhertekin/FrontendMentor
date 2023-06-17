@@ -26,8 +26,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Code](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/edit/main/Newbie/ProfileCardComponent)
+- Live Site URL: [Live](https://polite-pika-f930ef.netlify.app/)
 
 ## My process
 
