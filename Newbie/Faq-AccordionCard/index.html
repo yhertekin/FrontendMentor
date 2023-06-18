@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | FAQ Accordion Card</title>
+
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section class="card">
+				<img
+					class="image__box"
+					src="./images/illustration-box-desktop.svg"
+					alt="orange box"
+				/>
+				<div class="card__image">
+					<img
+						class="image__woman"
+						src="./images/illustration-woman-online-mobile.svg"
+						alt="woman online"
+					/>
+					<img
+						class="image__pattern"
+						src="./images/bg-pattern-mobile.svg"
+						alt="background pattern"
+					/>
+				</div>
+				<article class="content">
+					<h1 class="card__title">FAQ</h1>
+					<ul class="card__list">
+						<li class="card__list__item">
+							<details>
+								<summary>How many team members can I invite?</summary>
+								<p>
+									You can invite up to 2 additional users on the Free plan.
+									There is no limit on team members for the Premium plan.
+								</p>
+							</details>
+						</li>
+						<li class="card__list__item">
+							<details>
+								<summary>What is the maximum file upload size?</summary>
+								<p>
+									No more than 2GB. All files in your account must fit your
+									allotted storage space.
+								</p>
+							</details>
+						</li>
+						<li class="card__list__item">
+							<details>
+								<summary>How do I reset my password?</summary>
+								<p>
+									Click “Forgot password” from the login page or “Change
+									password” from your profile page. A reset link will be emailed
+									to you.
+								</p>
+							</details>
+						</li>
+						<li class="card__list__item">
+							<details>
+								<summary>Can I cancel my subscription?</summary>
+								<p>
+									Yes! Send us a message and we’ll process your request no
+									questions asked.
+								</p>
+							</details>
+						</li>
+						<li class="card__list__item">
+							<details>
+								<summary>Do you provide additional support?</summary>
+								<p>
+									Chat and email support is available 24/7. Phone lines are open
+									during normal business hours.
+								</p>
+							</details>
+						</li>
+					</ul>
+				</article>
+			</section>
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="https://github.com/yhertekin">yhertekin</a>.
+			</div>
+		</main>
+
+		<script>
+			const details = document.querySelectorAll("details");
+			details.forEach((targetDetail) => {
+				targetDetail.addEventListener("click", () => {
+					details.forEach((detail) => {
+						if (detail !== targetDetail) {
+							detail.removeAttribute("open");
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

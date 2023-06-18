@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+	/* Colors */
+	/* Primary */
+	--white: hsl(0, 0%, 100%);
+	/* Text */
+	--very-dark-desaturated-blue: hsl(238, 29%, 16%);
+	--soft-red: hsl(14, 88%, 65%);
+	/* Gradient */
+	/* Background gradient: */
+	--soft-violet: hsl(273, 75%, 66%);
+	--soft-blue: hsl(240, 73%, 65%);
+	/* Neutral */
+	/* Text */
+	--very-dark-grayish-blue: hsl(237, 12%, 33%);
+	--dark-grayish-blue: hsl(240, 6%, 50%);
+	/* Dividers */
+	--light-grayish-blue: hsl(240, 5%, 91%);
+	/* Typography */
+	--font-size: 12px;
+	--font-family: "Kumbh Sans", sans-serif;
+	--font-Weight-regular: 400;
+	--font-weight-bold: 700;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+}
+
+body {
+	background: linear-gradient(var(--soft-violet) 0%, var(--soft-blue) 100%);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main {
+	position: fixed;
+	margin-top: 10rem;
+}
+.card {
+	border-radius: 1rem;
+	background-color: var(--white);
+	padding: 2rem;
+	width: 350px;
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+		rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card__image {
+	position: relative;
+	width: 260px;
+	margin: 0 auto 10rem auto;
+}
+.image__box {
+	display: none;
+}
+
+.image__woman,
+.image__pattern {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+}
+.image__woman {
+	top: -12rem;
+}
+.image__pattern {
+	top: -2rem;
+}
+.card__title {
+	font-weight: var(--font-weight-bold);
+	font-size: 2rem;
+	text-align: center;
+}
+.card__list {
+	list-style-type: none;
+	margin: 1.3rem 0;
+}
+.card__list__item {
+	border-bottom: 1px solid var(--light-grayish-blue);
+	padding: 1.3rem 0;
+}
+
+details {
+	display: flex;
+}
+
+details summary {
+	list-style: none;
+	color: var(--very-dark-grayish-blue);
+	cursor: pointer;
+}
+details summary:after {
+	content: url(/images/icon-arrow-down.svg);
+	float: right;
+}
+details[open] summary {
+	color: var(--very-dark-desaturated-blue);
+	font-weight: var(--font-weight-bold);
+}
+details[open] summary:after {
+	transform: rotate(180deg);
+}
+
+details[open] p {
+	margin-top: 1rem;
+	color: var(--dark-grayish-blue);
+}
+
+@media only screen and (min-width: 1200px) {
+	.card {
+		display: flex;
+		width: 900px;
+		padding: 0;
+	}
+
+	.card__image {
+		width: 50%;
+		margin: 0;
+		overflow: hidden;
+	}
+	.image__box {
+		position: absolute;
+		display: block;
+		z-index: 2;
+		top: 15rem;
+		left: -7rem;
+	}
+	.image__woman {
+		inset: 0;
+		top: 5rem;
+		left: -6rem;
+		content: url(/images/illustration-woman-online-desktop.svg);
+	}
+	.image__pattern {
+		inset: 0;
+		width: 900px;
+		height: auto;
+		top: -23rem;
+		left: -44rem;
+		content: url(/images/bg-pattern-desktop.svg);
+	}
+
+	.content {
+		width: 50%;
+		padding: 5rem;
+	}
+	.card__title {
+		margin: 0;
+		text-align: left;
+	}
+}
