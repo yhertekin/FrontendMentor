@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/Faq-AccordionCard)
+- Live Site URL: [Live](https://lucent-buttercream-1d1298.netlify.app/)
 
 ## My process
 
