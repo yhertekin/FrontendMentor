@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Live]()
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/SocialProofSection)
+- Live Site URL: [Live](https://phenomenal-dusk-4e190f.netlify.app/)
 
 ## My process
 
