@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Live]()
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/ArticlePreviewComponent)
+- Live Site URL: [Live](https://resilient-cannoli-46d52a.netlify.app/)
 
 ## My process
 
