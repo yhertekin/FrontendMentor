@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Live]()
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/BaseApparelComingSoon)
+- Live Site URL: [Live](https://thunderous-shortbread-62e3c5.netlify.app/)
 
 ## My process
 
