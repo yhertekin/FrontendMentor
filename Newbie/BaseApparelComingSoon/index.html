@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Base Apparel coming soon page</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				margin-top: 1rem;
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<img class="header__logo" src="/images/logo.svg" alt="company logo" />
+		</header>
+		<main>
+			<picture>
+				<source srcset="/images/hero-desktop.jpg" media="(min-width: 1000px)" />
+				<img src="/images/hero-mobile.jpg" alt="woman posing" />
+			</picture>
+			<section class="content">
+				<h1 class="content__header"><span>We're</span> coming soon</h1>
+				<p class="content__text">
+					Hello fellow shoppers! We're currently building our new fashion store.
+					Add your email below to stay up-to-date with announcements and our
+					launch deals.
+				</p>
+				<article class="input__container">
+					<input
+						class="input"
+						type="email"
+						placeholder="Email Address"
+						required
+					/>
+					<button class="input__button">
+						<img src="/images/icon-arrow.svg" alt="arrow icon" />
+					</button>
+					<p class="input__text">Pleaes provide a valid email</p>
+				</article>
+				<footer>
+					<p class="attribution">
+						Challenge by
+						<a
+							href="https://www.frontendmentor.io?ref=challenge"
+							target="_blank"
+							>Frontend Mentor</a
+						>. Coded by <a href="https://github.com/yhertekin">yhertekin</a>.
+					</p>
+				</footer>
+			</section>
+		</main>
+	</body>
+
+	<script>
+		function isEmail(emailAdress) {
+			let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			return emailAdress.match(regex);
+		}
+
+		let button = document.querySelector(".input__button");
+		button.addEventListener("click", () => {
+			let emailAddress = document.querySelector(".input").value;
+			let inputContainer = document.querySelector(".input__container");
+			console.log(emailAddress);
+			if (!isEmail(emailAddress)) {
+				inputContainer.classList.add("input--error");
+			} else {
+				inputContainer.classList.remove("input--error");
+			}
+		});
+	</script>
+</html>
