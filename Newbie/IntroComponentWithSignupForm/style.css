@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap");
+
+:root {
+	/* Colors */
+
+	/* Primary */
+
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--white-100: hsla(0, 0%, 100%, 0.9);
+	--white-200: hsla(0, 0%, 100%);
+	--gray: hsla(0, 0%, 50%, 0.1);
+
+	/* Accent */
+
+	--blue: hsl(248, 32%, 49%);
+
+	/* Neutral */
+
+	--dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+
+	/* Typography */
+
+	--font-size: 16px;
+	--font-family: "Poppins", sans-serif;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--box-shadow-1: rgba(0, 0, 0, 0.15) 0px 7px;
+	--box-shadow-2: rgba(30, 155, 101, 0.774) 0px 4px;
+
+	--border-radius: 0.6rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+}
+
+body {
+	background-image: url(/images/bg-intro-mobile.png);
+	background-color: var(--red);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.header {
+	text-align: center;
+	color: var(--white-100);
+}
+
+.header__title {
+	font-size: 1.74rem;
+	line-height: 2.3rem;
+	font-weight: var(--font-weight-semibold);
+}
+.header__text {
+	padding: 1.6rem 1.5rem;
+}
+
+.main {
+	padding: 1.5rem;
+}
+
+.main__button {
+	border-radius: var(--border-radius);
+	border: none;
+	color: var(--white-100);
+	font-size: 0.9rem;
+	background-color: var(--blue);
+	padding: 1rem 5rem;
+	line-height: 1.4rem;
+	box-shadow: var(--box-shadow-1);
+	width: 100%;
+}
+
+.main__button > span {
+	font-weight: var(--font-weight-semibold);
+}
+
+.main__form {
+	padding: 1rem;
+	background-color: var(--white-200);
+	border-radius: var(--border-radius);
+	margin-top: 1.4rem;
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+.main__form input {
+	border-radius: 0.4rem;
+	padding: 1.3rem;
+	border: 2px solid var(--gray);
+	font-weight: var(--font-weight-bold);
+	color: var(--grayish-blue);
+}
+
+.main__form .form__submit {
+	background-color: var(--green);
+	text-transform: uppercase;
+	color: var(--white-100);
+	box-shadow: var(--box-shadow-2);
+	letter-spacing: 1px;
+}
+
+.form__info {
+	color: var(--grayish-blue);
+	font-size: 0.7rem;
+	text-align: center;
+	padding: 0 1.7rem;
+}
+.form__info > a {
+	color: var(--red);
+	text-decoration: none;
+	font-weight: var(--font-weight-bold);
+}
+
+@media only screen and (min-width: 1200px) {
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 7rem;
+	}
+
+	.header {
+		text-align: left;
+	}
+	.header__title {
+		padding-left: 2rem;
+		font-size: 3rem;
+		line-height: 3.3rem;
+	}
+	.header__text {
+		font-size: 1rem;
+		padding: 2rem;
+	}
+}
