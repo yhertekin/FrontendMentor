@@ -38,32 +38,40 @@
 				<span>Try it free 7 days</span> then $20/mo. thereafter
 			</button>
 			<form class="main__form" onsubmit="event.preventDefault()">
+				<div class="input__container">
+					<input
+						class="input__name"
+						type="text"
+						placeholder="First Name"
+						name="first_name"
+					/>
+				</div>
+				<div class="input__container">
+					<input
+						class="input__last-name"
+						type="text"
+						placeholder="Last Name"
+						name="last_name"
+					/>
+				</div>
+				<div class="input__container">
+					<input
+						class="input__email"
+						type="email"
+						placeholder="Email Address"
+						name="email_address"
+					/>
+				</div>
+				<div class="input__container">
+					<input
+						class="input__password"
+						type="password"
+						placeholder="Password"
+						name="password"
+					/>
+				</div>
 				<input
-					class="form__name"
-					type="text"
-					placeholder="First Name"
-					name="First Name"
-				/>
-				<input
-					class="form__last-name"
-					type="text"
-					placeholder="Last Name"
-					name="Last Name"
-				/>
-				<input
-					class="form__email"
-					type="email"
-					placeholder="Email Address"
-					name="Email Address"
-				/>
-				<input
-					class="form__password"
-					type="password"
-					placeholder="Password"
-					name="Password"
-				/>
-				<input
-					class="form__submit"
+					class="input__submit"
 					type="submit"
 					value="Claim your free trial "
 				/>
@@ -81,5 +89,61 @@
 				</p>
 			</footer>
 		</main>
+
+		<script>
+			function getErrorText(element) {
+				if (element.type === "email") {
+					return "Looks like this is not an email";
+				}
+				return element.placeholder + " cannot be empty";
+			}
+
+			function createErrorMessage(element) {
+				let p = document.createElement("p");
+				p.innerText = getErrorText(element);
+				p.classList.add("input__text--error");
+				element.after(p);
+
+				let icon = document.createElement("img");
+				icon.src = "/images/icon-error.svg";
+				icon.classList.add("input__icon--error");
+				element.before(icon);
+			}
+
+			function checkField(element) {
+				if (element.type === "email") {
+					return (
+						element.value === "" ||
+						!element.value.match(
+							/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+						)
+					);
+				}
+				return element.value === "";
+			}
+
+			let submit = document.querySelector(".input__submit");
+
+			submit.addEventListener("click", () => {
+				let inputFields = document.querySelectorAll(
+					"input:not(.input__submit)"
+				);
+				let currentErrors = document.querySelectorAll(".input__text--error");
+				let currentErrorsIcon = document.querySelectorAll(
+					".input__icon--error"
+				);
+
+				currentErrors.forEach((error) => error.remove());
+				currentErrorsIcon.forEach((error) => error.remove());
+
+				inputFields.forEach((field) => {
+					field.classList.remove("input--error");
+					if (checkField(field)) {
+						createErrorMessage(field);
+						field.classList.add("input--error");
+					}
+				});
+			});
+		</script>
 	</body>
 </html>

@@ -59,6 +59,7 @@ body {
 .header {
 	text-align: center;
 	color: var(--white-100);
+	margin-top: 6rem;
 }
 
 .header__title {
@@ -100,15 +101,44 @@ body {
 	flex-direction: column;
 }
 
+.input__container {
+	position: relative;
+}
+
 .main__form input {
 	border-radius: 0.4rem;
 	padding: 1.3rem;
 	border: 2px solid var(--gray);
 	font-weight: var(--font-weight-bold);
+	color: var(--dark-blue);
+	width: 100%;
+	font-size: 1rem;
+	outline-color: var(--dark-blue);
+}
+
+.main__form input::placeholder {
 	color: var(--grayish-blue);
 }
 
-.main__form .form__submit {
+.main__form input.input--error {
+	color: var(--red);
+	border-color: var(--red);
+}
+
+.input__icon--error {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.3rem;
+}
+.input__text--error {
+	text-align: right;
+	margin-top: 0.1rem;
+	font-size: 0.8rem;
+	font-style: italic;
+	color: var(--red);
+}
+
+.main__form input.input__submit {
 	background-color: var(--green);
 	text-transform: uppercase;
 	color: var(--white-100);
@@ -137,6 +167,7 @@ body {
 
 	.header {
 		text-align: left;
+		margin: 0;
 	}
 	.header__title {
 		padding-left: 2rem;
