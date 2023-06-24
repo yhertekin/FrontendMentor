@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://github.com/yhertekin)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/IntroComponentWithSignupForm)
+- Live Site URL: [Live](https://lighthearted-stardust-84c9ac.netlify.app/)
 
 ## My process
 
@@ -46,5 +46,5 @@ Users should be able to:
 
 ## Author
 
-- Github - [yhertekin](https://www.your-site.com)
+- GitHub - [yhertekin](https://github.com/yhertekin)
 - Frontend Mentor - [@yhertekin](https://www.frontendmentor.io/profile/yhertekin)
