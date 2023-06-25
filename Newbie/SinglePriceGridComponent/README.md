@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/edit/main/Newbie/SinglePriceGridComponent)
+- Live Site URL: [Live](https://starlit-bunny-756729.netlify.app/)
 
 ## My process
 
