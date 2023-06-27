@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Newbie/PingComingSoonPage)
+- Live Site URL: [Live](https://superlative-vacherin-74df6c.netlify.app/)
 
 ## My process
 
