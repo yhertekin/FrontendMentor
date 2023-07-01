@@ -100,3 +100,36 @@ body {
 	color: var(--white);
 	font-size: 1.2rem;
 }
+
+@media only screen and (min-width: 800px) {
+	body {
+		padding: 2rem 3rem;
+		background-image: url(/images/bg-desktop.svg);
+		background-size: cover;
+		min-height: 100vh;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	.header__logo {
+		width: 13rem;
+	}
+	.main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
+	}
+	.main__content {
+		text-align: left;
+	}
+	.main__content__header {
+		font-size: 2.7rem;
+		margin-top: 0;
+	}
+
+	.footer__socials {
+		margin: 0;
+		justify-content: flex-end;
+	}
+}
