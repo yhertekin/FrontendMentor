@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Live]()
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/edit/main/Newbie/HuddleLandingPageWithSingleIntroductorySection)
+- Live Site URL: [Live](https://regal-conkies-2153a0.netlify.app/)
 
 ## My process
 
