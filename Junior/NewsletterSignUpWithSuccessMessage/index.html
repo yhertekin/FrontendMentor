@@ -12,6 +12,7 @@
 			href="./assets/images/favicon-32x32.png"
 		/>
 		<link rel="stylesheet" href="style.css" />
+
 		<title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,83 +27,106 @@
 		</style>
 	</head>
 	<body>
-		<!-- Sign-up form start -->
-		<section class="container container__form visible">
-			<img
-				class="illustration"
-				src="/assets/images/illustration-sign-up-mobile.svg"
-				alt="illustration sign up"
-			/>
-			<article>
-				<h1 class="header">Stay updated!</h1>
-				<p class="text">Join 60,000+ product managers receiving monthly updates on:</p>
-
-				<ul class="list">
-					<li class="list__item">
-						<img src="/assets/images/icon-list.svg" alt="list icon" />
-						Product discovery and building what matters
-					</li>
-
-					<li class="list__item">
-						<img src="/assets/images/icon-list.svg" alt="list icon" />Measuring to ensure
-						updates are a success
-					</li>
-
-					<li class="list__item">
-						<img src="/assets/images/icon-list.svg" alt="list icon" />And much more!
-					</li>
-				</ul>
-
-				<form class="form" onsubmit="formSubmitHandler()">
-					<label for="email">
-						Email address
-						<span class="email__error-message hidden"> Valid email required </span>
-					</label>
-					<input
-						class="form__email"
-						id="email"
-						type="email"
-						placeholder="email@company.com"
+		<main>
+			<section class="container">
+				<section class="banner">
+					<img
+						class="banner__image"
+						src="/assets/images/illustration-sign-up-mobile.svg"
+						alt="sign-up illustration"
 					/>
-					<button class="form__button button" type="submit">
-						Subscribe to monthly newsletter
+				</section>
+				<section class="content">
+					<header class="content__header">
+						<h1 class="content__header__title">Stay updated!</h1>
+						<p class="content__header__text">
+							Join 60,000+ product managers receiving monthly updates on:
+						</p>
+					</header>
+					<ul class="content__list">
+						<li class="content__list__item">
+							Product discovery and building what matters
+						</li>
+						<li class="content__list__item">Measuring to ensure updates are a success</li>
+						<li class="content__list__item">And much more!</li>
+					</ul>
+					<form class="content__form" onsubmit="event.preventDefault()">
+						<label class="content__form__label" for="email">
+							<span>Email address</span>
+							<span class="text--error hidden">Valid email required</span>
+						</label>
+						<input
+							class="content__form__input"
+							id="email"
+							type="email"
+							name="email"
+							placeholder="email@company.com"
+						/>
+						<button class="content__form__button content__button" type="submit">
+							Subscribe to monthly newsletter
+						</button>
+					</form>
+				</section>
+			</section>
+			<section class="container hidden">
+				<section class="banner">
+					<img
+						class="banner__image banner__image--success"
+						src="/assets/images/icon-success.svg"
+						alt="success"
+					/>
+				</section>
+				<section class="content content--success">
+					<header class="content__header">
+						<h1 class="content__header__title">Thanks for subscribing!</h1>
+						<p class="content__header__text">
+							A confirmation email has been sent to
+							<strong>ash@loremcompany.com.</strong> Please open it and click the button
+							inside to confirm your subscription.
+						</p>
+					</header>
+					<button class="content__success__button content__button">
+						Dismiss message
 					</button>
-				</form>
-			</article>
-		</section>
-
-		<!-- Sign-up form end -->
-
-		<!-- Success message start -->
-
-		<section class="container container__success hidden">
-			<img class="success__icon" src="/assets/images/icon-success.svg" alt="success" />
-			<h1 class="header">Thanks for subscribing!</h1>
-			<p class="text">
-				A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
-				Please open it and click the button inside to confirm your subscription.
-			</p>
-			<button class="success__button button">Dismiss message</button>
-		</section>
-
-		<!-- Success message end -->
-		<footer>
+				</section>
+			</section>
 			<div class="attribution">
 				Challenge by
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 					>Frontend Mentor</a
-				>. Coded by <a href="#">Your Name Here</a>.
+				>. Coded by <a href="https://github.com/yhertekin">yhertekin</a>.
 			</div>
-		</footer>
+		</main>
 
 		<script>
-			function formSubmitHandler() {
-				const container__form = document.querySelector(".container__form");
-				const container__success = document.querySelector(".container__success");
-				container__form.classList.toggle("hidden");
-				container__success.classList.toggle("hidden");
-				event.preventDefault();
+			function switchPage() {
+				const containers = document.querySelectorAll(".container");
+				containers.forEach((container) => container.classList.toggle("hidden"));
 			}
+
+			function validateForm() {
+				const errorText = document.querySelector(".text--error");
+				const email = document.querySelector(".content__form__input");
+				const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				if (email.value.match(filter)) {
+					errorText.classList.add("hidden");
+					email.classList.remove("input--error");
+					return true;
+				}
+				errorText.classList.remove("hidden");
+				email.classList.add("input--error");
+				return false;
+			}
+			const formButton = document.querySelector(".content__form__button");
+			const successButton = document.querySelector(".content__success__button");
+
+			formButton.addEventListener("click", () => {
+				if (validateForm()) {
+					switchPage();
+				}
+			});
+
+			successButton.addEventListener("click", () => switchPage());
 		</script>
 	</body>
 </html>
