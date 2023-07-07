@@ -45,11 +45,14 @@ body {
 	display: none;
 }
 main {
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	flex-direction: column;
+}
+
+.banner {
+	width: 100%;
+}
+
+.banner__image--form {
+	width: 100%;
 }
 
 .banner__image--success {
@@ -58,10 +61,7 @@ main {
 .content {
 	padding: 1rem;
 }
-.content--success {
-	display: grid;
-	grid-template-rows: 1fr 1fr;
-}
+
 .content__header__title {
 	font-size: 2.7rem;
 	font-weight: var(--font-weight-bold);
@@ -120,6 +120,9 @@ main {
 	outline: none;
 	opacity: 1;
 }
+.content__form__input:hover {
+	cursor: pointer;
+}
 .content__button {
 	padding: 1rem;
 	border: none;
@@ -131,8 +134,31 @@ main {
 }
 .content__button:hover {
 	color: var(--white);
+	background: linear-gradient(
+		90deg,
+		rgba(255, 83, 121, 1) 0%,
+		rgba(255, 105, 58, 1) 100%
+	);
+	cursor: pointer;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+main .container:nth-of-type(2) {
+	margin: auto;
+}
 .content__success__button {
-	align-self: end;
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	right: 0;
+	width: calc(100% - 2rem);
+	margin: auto;
+}
+
+@media only screen and (width: 800px) {
 }
