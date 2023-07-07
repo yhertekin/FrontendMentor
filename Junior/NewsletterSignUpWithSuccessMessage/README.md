@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Live]()
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Junior/NewsletterSignUpWithSuccessMessage)
+- Live Site URL: [Live](https://rococo-pudding-2fd970.netlify.app/)
 
 ## My process
 
