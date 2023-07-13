@@ -45,9 +45,9 @@
 				</button>
 			</div>
 			<section>
-				<div class="result"><span>38</span> years</div>
-				<div class="result"><span>3</span> months</div>
-				<div class="result"><span>26</span> days</div>
+				<div class="result"><span class="result--year">38</span> years</div>
+				<div class="result"><span class="result--month">3</span> months</div>
+				<div class="result"><span class="result--day">26</span> days</div>
 			</section>
 		</main>
 
@@ -58,8 +58,43 @@
 			>. Coded by <a href="https://github.com/yhertekin">yhertekin</a>.
 		</div>
 		<script>
+			function validate(key, value) {
+				const condition = {
+					day: value < 1 || value < 31,
+					month: value < 1 || value < 12,
+					year: value < 1900 || value < new Date().getFullYear(),
+				};
+
+				return condition[key];
+			}
+
 			function calculate() {
-				console.log("calculating...");
+				const day = document.querySelector("#day");
+				const month = document.querySelector("#month");
+				const year = document.querySelector("#year");
+
+				// if (!validate("day", day)) return false;
+				// if (!validate("month", month)) return false;
+				// if (!validate("year", year)) return false;
+
+				const birthDate = new Date(year.value, month.value - 1, day.value);
+				const diffDate = new Date(
+					new Date() - new Date(year.value, month.value - 1, day.value)
+				);
+
+				const outputYear = diffDate.toISOString().slice(0, 4) - 1970;
+				const outputMonth = diffDate.getMonth();
+				const outputDay = diffDate.getDate() - 1;
+
+				const resultYear = document.querySelector(".result--year");
+				const resultMonth = document.querySelector(".result--month");
+				const resultDay = document.querySelector(".result--day");
+
+				resultYear.innerText = outputYear;
+				resultMonth.innerText = outputMonth;
+				resultDay.innerText = outputDay;
+
+				console.log(outputYear, outputMonth, outputDay);
 			}
 		</script>
 	</body>

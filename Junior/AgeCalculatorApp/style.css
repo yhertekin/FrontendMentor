@@ -74,6 +74,9 @@ main {
 	font-size: 1rem;
 	color: var(--off-black);
 }
+.form-group > input:focus {
+	border-color: var(--purple);
+}
 
 .divider {
 	width: 100%;
@@ -93,6 +96,9 @@ main {
 	border: none;
 	background-color: var(--purple);
 	padding: 0.7rem;
+}
+.divider > button:hover {
+	background-color: var(--off-black);
 }
 .divider > button > img {
 	width: 100%;
