@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "inter";
+    src: url("/assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  }
+  html {
+    @apply font-inter;
+  }
+  body {
+    @apply p-2 bg-offwhite;
+  }
+  main {
+    @apply py-2;
+  }
+}
+
+.header {
+  @apply py-2 flex items-center;
+}
+
+.header__menu-icon {
+  @apply ml-auto;
+}
+
+.header__menu {
+  @apply hidden;
+}
+
+.main-news__title {
+  @apply font-extrabold text-5xl text-blue-very_dark mt-6;
+}
+
+.main-news__text {
+  @apply text-blue-dark_grayish my-4;
+}
+
+.main-news__button {
+  @apply py-2 px-4 bg-red-soft text-offwhite uppercase tracking-wider;
+}
+/*# sourceMappingURL=input.css.map */
