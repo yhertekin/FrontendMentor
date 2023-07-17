@@ -9,18 +9,39 @@
 	--color-white: 255, 255, 255;
 
 	/* Fonts */
-	--font-size-900: 9.375rem;
-	--font-size-800: 6.25rem;
-	--font-size-700: 3.5rem;
-	--font-size-600: 2rem;
+	--font-size-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+	--font-size-800: 3.5rem;
+	--font-size-700: 1.5rem;
+	--font-size-600: 1rem;
 	--font-size-500: 1.75rem;
-	--font-size-400: 1.125rem;
+	--font-size-400: 0.9375rem;
 	--font-size-300: 1rem;
 	--font-size-200: 0.875rem;
 
 	--font-family-serif: "Bellefair", serif;
 	--font-family-sans-cond: "Barlow Condensed", sans-serif;
 	--font-family-sans-normal: "Barlow", sans-serif;
+}
+
+@media (min-width: 35em) {
+	:root {
+		/* Fonts */
+
+		--font-size-800: 5rem;
+		--font-size-700: 2.5rem;
+		--font-size-600: 1.5rem;
+		--font-size-400: 1rem;
+	}
+}
+@media (min-width: 45em) {
+	:root {
+		/* Fonts */
+
+		--font-size-800: 6.25rem;
+		--font-size-700: 3.5rem;
+		--font-size-600: 2rem;
+		--font-size-400: 1.125rem;
+	}
 }
 
 /* Reset */
@@ -50,6 +71,8 @@ body {
 	min-height: 100vh;
 	color: rgb(var(--color-white));
 	background: rgb(var(--color-dark));
+	display: grid;
+	grid-template-rows: min-content 1fr;
 }
 
 img,
@@ -88,16 +111,48 @@ select {
 	display: grid;
 	gap: var(--gap, 1rem);
 }
+.block {
+	display: block;
+}
+
 /* Selects element that has not sibling before it. */
 .flow > * + * {
 	margin-top: var(--flow-space, 1rem);
-	border: 1px solid red;
 }
 
 .container {
 	padding: 0 2rem;
 	margin: 0 auto;
 	max-width: 80rem;
+}
+
+.grid-container {
+	display: grid;
+	place-items: center;
+	padding: 0 1rem;
+	text-align: center;
+}
+
+.grid-container * {
+	max-width: 50ch;
+}
+
+@media (min-width: 45em) {
+	.grid-container {
+		text-align: left;
+		grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+		column-gap: var(--container-gap, 2rem);
+	}
+	.grid-container > *:first-child {
+		grid-column: 2;
+	}
+	.grid-container > *:last-child {
+		grid-column: 3;
+	}
+	.grid-container--home {
+		padding-bottom: max(6rem, 20vh);
+		align-items: end;
+	}
 }
 
 .sr-only {
@@ -203,7 +258,7 @@ select {
 /* Components */
 
 .large-button {
-	display: grid;
+	display: inline-grid;
 	place-items: center;
 	padding: 0 2em;
 	aspect-ratio: 1;
@@ -211,6 +266,7 @@ select {
 	text-decoration: none;
 	position: relative;
 	z-index: 1;
+	font-size: 2rem;
 }
 
 .large-button::after {
@@ -296,4 +352,27 @@ select {
 .number-indicators > *:hover,
 .number-indicators > *:focus {
 	border-color: rgba(var(--color-white), 1);
+}
+
+/* page specific */
+body {
+	background-size: cover;
+	background-position: bottom center;
+}
+
+.home {
+	background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+	.home {
+		background-image: url(./assets/home/background-home-tablet.jpg);
+		background-position: center center;
+	}
+}
+
+@media (min-width: 45rem) {
+	.home {
+		background-image: url(./assets/home/background-home-desktop.jpg);
+	}
 }
