@@ -622,3 +622,7 @@ body {
 		align-self: end;
 	}
 }
+
+.content-animation {
+	transition: all 1000ms ease-in;
+}

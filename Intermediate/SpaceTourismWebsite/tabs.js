@@ -7,29 +7,42 @@ fetch("./data.json")
 const tabList = document.querySelector(".tab-list");
 const tabs = [...document.querySelectorAll(".tab")];
 const main = document.querySelector("main");
+const picture = document.querySelector("picture");
 
 tabs.map((tab) =>
 	tab.addEventListener("click", () => {
 		const content = data.filter((d) => d.name.toLowerCase() === tab.innerText.toLowerCase())[0];
-		console.log(content);
-		const htmlContent = `
-      <article class="destination-info flow">
-        <h2 class="fs-800 uppercase ff-serif">${content.name}</h2>
-        <p>
-          ${content.description}
-        </p>
-        <div class="destination-meta flex">
-          <div>
-            <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
-            <p class="ff-serif uppercase">384,400 km</p>
-          </div>
-          <div>
-            <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
-            <p class="ff-serif uppercase">3 days</p>
-          </div>
-        </div>
-      </article>
-  `;
-		main.innerHTML += htmlContent;
+		changeActiveTab(tabs, tab);
+		changeActiveImage(picture, content);
+		changeActiveContent(content);
 	})
 );
+
+function changeActiveTab(tabs, currentTab) {
+	tabs.forEach((t) => t.setAttribute("aria-selected", false));
+	currentTab.setAttribute("aria-selected", true);
+}
+
+function changeActiveImage(picture, data) {
+	const [source, img] = picture.children;
+
+	source.classList.remove("content-animation");
+	source.classList.add("content-animation");
+
+	img.classList.remove("content-animation");
+	img.classList.add("content-animation");
+
+	source.srcset = data.images.webp;
+	img.src = data.images.png;
+}
+
+function changeActiveContent(content) {
+	const title = document.querySelector("#content-title");
+	const text = document.querySelector("#content-text");
+	const distance = document.querySelector("#content-distance");
+	const travel = document.querySelector("#content-travel");
+	title.innerText = content.name;
+	text.innerText = content.description;
+	distance.innerText = content.distance;
+	travel.innerText = content.travel;
+}
