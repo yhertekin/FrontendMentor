@@ -4,9 +4,7 @@ fetch("./data.json")
 	.then((_data) => (data = _data["destinations"]))
 	.catch((error) => console.log(error));
 
-const tabList = document.querySelector(".tab-list");
 const tabs = [...document.querySelectorAll(".tab")];
-const main = document.querySelector("main");
 const picture = document.querySelector("picture");
 
 tabs.map((tab) =>
@@ -25,12 +23,6 @@ function changeActiveTab(tabs, currentTab) {
 
 function changeActiveImage(picture, data) {
 	const [source, img] = picture.children;
-
-	source.classList.remove("content-animation");
-	source.classList.add("content-animation");
-
-	img.classList.remove("content-animation");
-	img.classList.add("content-animation");
 
 	source.srcset = data.images.webp;
 	img.src = data.images.png;

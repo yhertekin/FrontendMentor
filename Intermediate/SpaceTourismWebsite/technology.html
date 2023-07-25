@@ -8,7 +8,7 @@
 		<script src="app.js" defer></script>
 		<title>Frontend Mentor | Space tourism website</title>
 	</head>
-	<body class="technology">
+	<body class="tech">
 		<a href="#main" class="skip-to-content"> Skip to content </a>
 		<header class="primary-header flex">
 			<div>
@@ -46,19 +46,19 @@
 				</ul>
 			</nav>
 		</header>
-		<main id="main" class="grid-container grid-container--crew flow">
+		<main id="main" class="grid-container grid-container--tech flow">
 			<h1 class="numbered-title"><span aria-hidden="true">03</span> Space launch 101</h1>
-			<div class="number-indicators">
-				<button aria-selected="true">1</button>
-				<button aria-selected="false">2</button>
-				<button aria-selected="false">3</button>
+			<div class="number-indicators flex">
+				<button aria-selected="true" class="number-indicator" name="Launch vehicle">1</button>
+				<button aria-selected="false" class="number-indicator" name="Spaceport">2</button>
+				<button aria-selected="false" class="number-indicator" name="Space capsule">3</button>
 			</div>
-			<article class="crew-info flow">
+			<article class="tech-info flow">
 				<header class="flow flow-space--small">
 					<h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
-					<p class="fs-700 ff-serif uppercase">Launch vehicle</p>
+					<p class="fs-700 ff-serif uppercase tech-name">Launch vehicle</p>
 				</header>
-				<p>
+				<p class="tech-description">
 					A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload
 					from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket
 					is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring
@@ -66,8 +66,14 @@
 				</p>
 			</article>
 			<picture>
-				<img src="/assets/technology/image-launch-vehicle-landscape.jpg" alt="the moon" />
+				<source
+					media="(max-width: 45rem)"
+					srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
+				/>
+				<img src="/assets/technology/image-launch-vehicle-portrait.jpg" alt="the vehicle" />
 			</picture>
 		</main>
+		<script type="module" src="./utils.js"></script>
+		<script src="./dotIndicators.js"></script>
 	</body>
 </html>
