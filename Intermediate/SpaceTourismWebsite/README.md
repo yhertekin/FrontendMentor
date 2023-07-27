@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution: [Code](https://your-solution-url.com)
-- Live Site: [Live](https://your-live-site-url.com)
+- Solution: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Intermediate/SpaceTourismWebsite)
+- Live Site: [Live](https://vocal-mousse-337575.netlify.app/)
 
 ## My process
 
