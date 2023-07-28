@@ -3,39 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-family: "inter";
-		src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
-	}
-	html {
-		@apply font-inter;
-	}
-	body {
-		@apply p-2 bg-offwhite;
-	}
-	main {
-		@apply py-2;
-	}
+    @font-face {
+        font-family: "inter";
+        src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+    }
+    html {
+        @apply font-inter;
+    }
+    body {
+        @apply bg-offwhite p-4;
+    }
 }
 
 .header {
-	@apply py-2 flex items-center;
-	&__menu-icon {
-		@apply ml-auto;
-	}
-	&__menu {
-		@apply hidden;
-	}
-}
+    @apply flex bg-red-200;
 
-.main-news {
-	&__title {
-		@apply font-extrabold text-5xl text-blue-very_dark mt-6;
-	}
-	&__text {
-		@apply text-blue-dark_grayish my-4;
-	}
-	&__button {
-		@apply py-2 px-4 bg-red-soft text-offwhite uppercase tracking-wider;
-	}
+    .menu-icon {
+        @apply ml-auto absolute right-4 top-6 z-1;
+    }
+
+    .navbar {
+        @apply absolute bg-offwhite h-screen top-0 right-0;
+    }
 }

@@ -10,34 +10,15 @@
     @apply font-inter;
   }
   body {
-    @apply p-2 bg-offwhite;
-  }
-  main {
-    @apply py-2;
+    @apply bg-offwhite p-4;
   }
 }
-
 .header {
-  @apply py-2 flex items-center;
+  @apply flex bg-red-200;
 }
-
-.header__menu-icon {
-  @apply ml-auto;
+.header .menu-icon {
+  @apply ml-auto absolute right-4 top-6 z-1;
 }
-
-.header__menu {
-  @apply hidden;
-}
-
-.main-news__title {
-  @apply font-extrabold text-5xl text-blue-very_dark mt-6;
-}
-
-.main-news__text {
-  @apply text-blue-dark_grayish my-4;
-}
-
-.main-news__button {
-  @apply py-2 px-4 bg-red-soft text-offwhite uppercase tracking-wider;
-}
-/*# sourceMappingURL=input.css.map */
+.header .navbar {
+  @apply absolute bg-offwhite h-screen top-0 right-0;
+}/*# sourceMappingURL=input.css.map */
