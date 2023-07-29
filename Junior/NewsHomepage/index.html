@@ -23,8 +23,13 @@
     <body>
         <header class="header">
             <img class="logo" src="/assets/images/logo.svg" alt="logo" />
-            <img class="menu-icon" src="/assets/images/icon-menu.svg" alt="hamburger menu" />
-            <nav class="navbar hidden">
+            <img
+                class="mobile-nav-toggle"
+                src="/assets/images/icon-menu.svg"
+                alt="hamburger menu"
+                onclick="toggleNavbar()"
+            />
+            <nav class="navbar navbar--close">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">New</a></li>
@@ -34,22 +39,36 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="main">
             <section class="main-news">
-                <img class="main-news__image" src="/assets/images/image-web-3-mobile.jpg" alt="web 3" />
-                <h1 class="main-news__title">The Bright Future of Web 3.0?</h1>
-                <p class="main-news__text">
-                    We dive into the next evolution of the web that claims to put the power of the platforms back into
-                    the hands of the people. But is it really fulfilling its promise?
-                </p>
-                <button class="main-news__button">Read more</button>
+                <img src="/assets/images/image-web-3-mobile.jpg" alt="web 3" />
+                <h1>The Bright Future of Web 3.0?</h1>
+                <div>
+                    <p>
+                        We dive into the next evolution of the web that claims to put the power of the platforms back
+                        into the hands of the people. But is it really fulfilling its promise?
+                    </p>
+                    <button>Read more</button>
+                </div>
+            </section>
+            <section class="recent-news">
+                <h2>New</h2>
+                <article>
+                    <h3>Hydrogen VS Electric Cars</h3>
+                    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                </article>
+                <article>
+                    <h3>The Downsides of AI Artistry</h3>
+                    <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                </article>
+                <article>
+                    <h3>Is VC Funding Drying Up?</h3>
+                    <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                </article>
             </section>
         </main>
-        New Hydrogen VS Electric Cars Will hydrogen-fueled cars ever catch up to EVs? The Downsides of AI Artistry What
-        are the possible adverse effects of on-demand AI image generation? Is VC Funding Drying Up? Private funding by
-        VC firms is down 50% YOY. We take a look at what that means. 01 Reviving Retro PCs What happens when old PCs are
-        given modern upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and budgets. 03 The Growth of
-        Gaming How the pandemic has sparked fresh opportunities.
+        01 Reviving Retro PCs What happens when old PCs are given modern upgrades? 02 Top 10 Laptops of 2022 Our best
+        picks for various needs and budgets. 03 The Growth of Gaming How the pandemic has sparked fresh opportunities.
 
         <div class="attribution">
             Challenge by
@@ -58,15 +77,16 @@
         </div>
 
         <script>
-            function toggleSideMenu() {
-                const menuIcon = document.querySelector(".menu-icon");
-                menuIcon.addEventListener("click", () => {
-                    console.log("hello world");
-                    const navbar = document.querySelector(".navbar");
-                    navbar.classList.toggle("hidden");
-                });
+            function toggleNavbar() {
+                const navbar = document.querySelector(".navbar");
+                navbar.classList.toggle("navbar--close");
+                const menuIcon = document.querySelector(".mobile-nav-toggle");
+                if (navbar.classList.contains("navbar--close")) {
+                    menuIcon.src = "./assets/images/icon-menu.svg";
+                } else {
+                    menuIcon.src = "./assets/images/icon-menu-close.svg";
+                }
             }
-            toggleSideMenu();
         </script>
     </body>
 </html>

@@ -550,20 +550,16 @@ body {
   --tw-backdrop-sepia:  ;
 }
 
-.hidden {
-  display: none;
-}
-
 .header {
   display: flex;
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  align-items: center;
 }
 
-.header .menu-icon {
+.header .mobile-nav-toggle {
   position: absolute;
   right: 1rem;
   top: 1.5rem;
+  z-index: 10;
   margin-left: auto;
 }
 
@@ -574,5 +570,177 @@ body {
   height: 100vh;
   --tw-bg-opacity: 1;
   background-color: hsl(36 100% 99% / var(--tw-bg-opacity));
+}
+
+.header .navbar--close {
+  display: none;
+}
+
+.header .navbar > ul {
+  margin-top: 8rem;
+  margin-right: 8rem;
+}
+
+.header .navbar > ul > li {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .header .mobile-nav-toggle {
+    display: none;
+  }
+
+  .header .navbar {
+    position: static;
+    margin-left: auto;
+    display: flex;
+    height: auto;
+    padding: 0px;
+  }
+
+  .header .navbar--close {
+    display: block;
+  }
+
+  .header .navbar > ul {
+    margin: 0px;
+    display: flex;
+  }
+
+  .header .navbar > ul > li {
+    margin-left: 1rem;
+    margin-top: 0px;
+    font-weight: 500;
+  }
+}
+
+.main .main-news img {
+  width: 100%;
+}
+
+.main .main-news h1 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.main .main-news p {
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: hsl(240 100% 5% / var(--tw-text-opacity));
+}
+
+.main .main-news button {
+  --tw-bg-opacity: 1;
+  background-color: hsl(5 85% 63% / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  --tw-text-opacity: 1;
+  color: hsl(36 100% 99% / var(--tw-text-opacity));
+}
+
+.main .recent-news {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 100% 5% / var(--tw-bg-opacity));
+  padding: 1.5rem;
+}
+
+.main .recent-news article:not(:last-child) {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(233 8% 79% / var(--tw-border-opacity));
+  padding-bottom: 1.5rem;
+}
+
+.main .recent-news h2 {
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: hsl(35 77% 62% / var(--tw-text-opacity));
+}
+
+.main .recent-news h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: hsl(36 100% 99% / var(--tw-text-opacity));
+}
+
+.main .recent-news p {
+  --tw-text-opacity: 1;
+  color: hsl(233 8% 79% / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+
+  .main .main-news {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .main .main-news img {
+    grid-column: span 2 / span 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 20rem;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .main .main-news h1 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 800;
+  }
+
+  .main .main-news p {
+    line-height: 2rem;
+    --tw-text-opacity: 1;
+    color: hsl(240 100% 5% / var(--tw-text-opacity));
+  }
+
+  .main .main-news button {
+    --tw-bg-opacity: 1;
+    background-color: hsl(5 85% 63% / var(--tw-bg-opacity));
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    --tw-text-opacity: 1;
+    color: hsl(36 100% 99% / var(--tw-text-opacity));
+  }
 }
 /*# sourceMappingURL=output.css.map */
