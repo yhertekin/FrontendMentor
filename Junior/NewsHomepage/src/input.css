@@ -20,13 +20,13 @@
   @apply ml-auto absolute right-4 top-6 z-10;
 }
 .header .navbar {
-  @apply absolute bg-offwhite h-screen top-0 right-0;
+  @apply absolute bg-offwhite h-screen w-screen top-0 right-0 bg-blue-soft;
 }
 .header .navbar--close {
   @apply hidden;
 }
 .header .navbar > ul {
-  @apply mt-32 mr-32;
+  @apply absolute right-0 pt-24 w-[70%] h-[100%] bg-offwhite;
 }
 .header .navbar > ul > li {
   @apply mt-4 ml-6 text-lg font-semibold;
@@ -37,20 +37,23 @@
     @apply hidden;
   }
   .header .navbar {
-    @apply flex static  h-auto ml-auto p-0;
+    @apply flex static w-auto h-auto ml-auto p-0 bg-inherit;
   }
   .header .navbar--close {
     @apply block;
   }
   .header .navbar > ul {
-    @apply flex m-0;
+    @apply static flex m-0 p-0;
   }
   .header .navbar > ul > li {
     @apply ml-4 mt-0 font-medium;
   }
 }
-.main .main-news img {
-  @apply w-full;
+.main {
+  @apply grid gap-4 mt-4;
+}
+.main .main-news {
+  @apply grid gap-4;
 }
 .main .main-news h1 {
   @apply text-5xl font-extrabold;
@@ -59,16 +62,19 @@
   @apply leading-8 text-blue-very_dark;
 }
 .main .main-news button {
-  @apply bg-red-soft text-offwhite uppercase px-8 py-2 tracking-widest;
+  @apply bg-red-soft text-offwhite uppercase px-8 py-2 tracking-widest mt-4;
 }
 .main .recent-news {
   @apply p-6 bg-blue-very_dark;
+}
+.main .recent-news article {
+  @apply mt-6;
 }
 .main .recent-news article:not(:last-child) {
   @apply border-b border-blue-grayish pb-6;
 }
 .main .recent-news h2 {
-  @apply text-orange-soft font-bold text-5xl mt-0 mb-8;
+  @apply text-orange-soft font-bold text-5xl mt-0;
 }
 .main .recent-news h3 {
   @apply text-offwhite font-bold text-xl;
@@ -76,27 +82,63 @@
 .main .recent-news p {
   @apply text-blue-grayish;
 }
+.main .others {
+  @apply grid gap-4;
+}
+.main .others article {
+  @apply flex gap-4 items-center;
+}
+.main .others article img {
+  @apply w-[6rem];
+}
+.main .others article .content {
+  @apply flex justify-evenly flex-col h-full;
+}
+.main .others article .content div {
+  @apply text-blue-grayish text-2xl font-bold;
+}
+.main .others article .content h4 {
+  @apply text-blue-very_dark text-xl font-bold;
+}
+.main .others article .content p {
+  @apply text-blue-dark_grayish;
+}
 
 @screen lg {
   body {
     @apply px-20 py-8;
   }
   .main {
-    @apply grid grid-cols-3  gap-x-4;
+    @apply grid-cols-3 grid-rows-1 gap-8  mt-8;
   }
   .main .main-news {
-    @apply grid grid-cols-2 grid-rows-2 col-span-2 row-span-3;
+    @apply grid-cols-2 grid-rows-1  gap-8 col-span-2;
   }
-  .main .main-news img {
-    @apply col-span-2 row-start-1 row-end-2 w-full h-80 object-cover object-top;
+  .main .main-news article {
+    @apply mt-8;
+  }
+  .main .main-news article:not(:last-child) {
+    @apply pb-8;
+  }
+  .main .main-news picture {
+    @apply col-span-2;
   }
   .main .main-news h1 {
-    @apply text-5xl font-extrabold;
+    @apply text-6xl;
   }
   .main .main-news p {
-    @apply leading-8 text-blue-very_dark;
+    @apply text-xl;
   }
   .main .main-news button {
-    @apply bg-red-soft text-offwhite uppercase px-8 py-2 tracking-widest;
+    @apply px-8 py-2 text-xl mt-8;
+  }
+  .main .recent-news {
+    @apply p-8;
+  }
+  .main .others {
+    @apply grid-cols-3 gap-8 col-span-3;
+  }
+  .main .others article img {
+    @apply w-[7rem];
   }
 }/*# sourceMappingURL=input.css.map */

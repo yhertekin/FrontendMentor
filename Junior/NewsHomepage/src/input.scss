@@ -23,7 +23,7 @@
     }
 
     .navbar {
-        @apply absolute bg-offwhite h-screen top-0 right-0;
+        @apply absolute bg-offwhite h-screen w-screen top-0 right-0 bg-blue-soft;
     }
 
     .navbar--close {
@@ -31,7 +31,7 @@
     }
 
     .navbar > ul {
-        @apply mt-32 mr-32;
+        @apply absolute right-0 pt-24 w-[70%] h-[100%] bg-offwhite;
     }
     .navbar > ul > li {
         @apply mt-4 ml-6 text-lg font-semibold;
@@ -44,13 +44,13 @@
             @apply hidden;
         }
         .navbar {
-            @apply flex static  h-auto ml-auto p-0;
+            @apply flex static w-auto h-auto ml-auto p-0 bg-inherit;
         }
         .navbar--close {
             @apply block;
         }
         .navbar > ul {
-            @apply flex m-0;
+            @apply static flex m-0 p-0;
         }
         .navbar > ul > li {
             @apply ml-4 mt-0 font-medium;
@@ -59,10 +59,10 @@
 }
 
 .main {
+    @apply grid gap-4 mt-4;
     .main-news {
-        img {
-            @apply w-full;
-        }
+        @apply grid gap-4;
+
         h1 {
             @apply text-5xl font-extrabold;
         }
@@ -70,22 +70,47 @@
             @apply leading-8 text-blue-very_dark;
         }
         button {
-            @apply bg-red-soft text-offwhite uppercase px-8 py-2 tracking-widest;
+            @apply bg-red-soft text-offwhite uppercase px-8 py-2 tracking-widest mt-4;
         }
     }
     .recent-news {
         @apply p-6 bg-blue-very_dark;
+        article {
+            @apply mt-6;
+        }
         article:not(:last-child) {
             @apply border-b border-blue-grayish pb-6;
         }
         h2 {
-            @apply text-orange-soft font-bold text-5xl mt-0 mb-8;
+            @apply text-orange-soft font-bold text-5xl mt-0;
         }
         h3 {
             @apply text-offwhite font-bold text-xl;
         }
         p {
             @apply text-blue-grayish;
+        }
+    }
+
+    .others {
+        @apply grid gap-4;
+        article {
+            @apply flex gap-4 items-center;
+            img {
+                @apply w-[6rem];
+            }
+            .content {
+                @apply flex justify-evenly flex-col h-full;
+                div {
+                    @apply text-blue-grayish text-2xl font-bold;
+                }
+                h4 {
+                    @apply text-blue-very_dark text-xl font-bold;
+                }
+                p {
+                    @apply text-blue-dark_grayish;
+                }
+            }
         }
     }
 }
@@ -95,20 +120,52 @@
         @apply px-20 py-8;
     }
     .main {
-        @apply grid grid-cols-3  gap-x-4;
+        @apply grid-cols-3 grid-rows-1 gap-8  mt-8;
         .main-news {
-            @apply grid grid-cols-2 grid-rows-2 col-span-2 row-span-3;
-            img {
-                @apply col-span-2 row-start-1 row-end-2 w-full h-80 object-cover object-top;
+            @apply grid-cols-2 grid-rows-1  gap-8 col-span-2;
+            article {
+                @apply mt-8;
+            }
+            article:not(:last-child) {
+                @apply pb-8;
+            }
+            picture {
+                @apply col-span-2;
             }
             h1 {
-                @apply text-5xl font-extrabold;
+                @apply text-6xl;
             }
             p {
-                @apply leading-8 text-blue-very_dark;
+                @apply text-xl;
             }
             button {
-                @apply bg-red-soft text-offwhite uppercase px-8 py-2 tracking-widest;
+                @apply px-8 py-2 text-xl mt-8;
+            }
+        }
+
+        .recent-news {
+            @apply p-8;
+            article:not(:last-child) {
+            }
+            h2 {
+            }
+            h3 {
+            }
+            p {
+            }
+        }
+        .others {
+            @apply grid-cols-3 gap-8 col-span-3;
+            article {
+                img {
+                    @apply w-[7rem];
+                }
+                .content {
+                    div {
+                    }
+                    h4 {
+                    }
+                }
             }
         }
     }

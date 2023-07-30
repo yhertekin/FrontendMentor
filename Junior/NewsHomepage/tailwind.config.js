@@ -18,6 +18,7 @@ module.exports = {
                     grayish: "hsl(233, 8%, 79%)",
                     dark_grayish: "hsl(236, 13%, 42%)",
                     very_dark: "hsl(240, 100%, 5%)",
+                    soft: "hsla(240, 100%, 5%, 0.5)",
                 },
             },
         },

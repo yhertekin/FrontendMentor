@@ -568,8 +568,10 @@ body {
   top: 0px;
   right: 0px;
   height: 100vh;
+  width: 100vw;
   --tw-bg-opacity: 1;
   background-color: hsl(36 100% 99% / var(--tw-bg-opacity));
+  background-color: hsla(240, 100%, 5%, 0.5);
 }
 
 .header .navbar--close {
@@ -577,8 +579,13 @@ body {
 }
 
 .header .navbar > ul {
-  margin-top: 8rem;
-  margin-right: 8rem;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 70%;
+  --tw-bg-opacity: 1;
+  background-color: hsl(36 100% 99% / var(--tw-bg-opacity));
+  padding-top: 6rem;
 }
 
 .header .navbar > ul > li {
@@ -599,6 +606,8 @@ body {
     margin-left: auto;
     display: flex;
     height: auto;
+    width: auto;
+    background-color: inherit;
     padding: 0px;
   }
 
@@ -607,8 +616,10 @@ body {
   }
 
   .header .navbar > ul {
+    position: static;
     margin: 0px;
     display: flex;
+    padding: 0px;
   }
 
   .header .navbar > ul > li {
@@ -618,8 +629,15 @@ body {
   }
 }
 
-.main .main-news img {
-  width: 100%;
+.main {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.main .main-news {
+  display: grid;
+  gap: 1rem;
 }
 
 .main .main-news h1 {
@@ -635,6 +653,7 @@ body {
 }
 
 .main .main-news button {
+  margin-top: 1rem;
   --tw-bg-opacity: 1;
   background-color: hsl(5 85% 63% / var(--tw-bg-opacity));
   padding-left: 2rem;
@@ -653,6 +672,10 @@ body {
   padding: 1.5rem;
 }
 
+.main .recent-news article {
+  margin-top: 1.5rem;
+}
+
 .main .recent-news article:not(:last-child) {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
@@ -662,7 +685,6 @@ body {
 
 .main .recent-news h2 {
   margin-top: 0px;
-  margin-bottom: 2rem;
   font-size: 3rem;
   line-height: 1;
   font-weight: 700;
@@ -683,6 +705,49 @@ body {
   color: hsl(233 8% 79% / var(--tw-text-opacity));
 }
 
+.main .others {
+  display: grid;
+  gap: 1rem;
+}
+
+.main .others article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main .others article img {
+  width: 6rem;
+}
+
+.main .others article .content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main .others article .content div {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: hsl(233 8% 79% / var(--tw-text-opacity));
+}
+
+.main .others article .content h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: hsl(240 100% 5% / var(--tw-text-opacity));
+}
+
+.main .others article .content p {
+  --tw-text-opacity: 1;
+  color: hsl(236 13% 42% / var(--tw-text-opacity));
+}
+
 @media (min-width: 1024px) {
   body {
     padding-left: 5rem;
@@ -692,55 +757,63 @@ body {
   }
 
   .main {
-    display: grid;
+    margin-top: 2rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
   }
 
   .main .main-news {
     grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
   }
 
-  .main .main-news img {
+  .main .main-news article {
+    margin-top: 2rem;
+  }
+
+  .main .main-news article:not(:last-child) {
+    padding-bottom: 2rem;
+  }
+
+  .main .main-news picture {
     grid-column: span 2 / span 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    height: 20rem;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: top;
-       object-position: top;
   }
 
   .main .main-news h1 {
-    font-size: 3rem;
+    font-size: 3.75rem;
     line-height: 1;
-    font-weight: 800;
   }
 
   .main .main-news p {
-    line-height: 2rem;
-    --tw-text-opacity: 1;
-    color: hsl(240 100% 5% / var(--tw-text-opacity));
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .main .main-news button {
-    --tw-bg-opacity: 1;
-    background-color: hsl(5 85% 63% / var(--tw-bg-opacity));
+    margin-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    --tw-text-opacity: 1;
-    color: hsl(36 100% 99% / var(--tw-text-opacity));
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .main .recent-news {
+    padding: 2rem;
+  }
+
+  .main .others {
+    grid-column: span 3 / span 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .main .others article img {
+    width: 7rem;
   }
 }
 /*# sourceMappingURL=output.css.map */
