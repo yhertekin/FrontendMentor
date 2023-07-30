@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Code]()
--   Live Site URL: [Live]()
+-   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Junior/NewsHomepage)
+-   Live Site URL: [Live](https://moonlit-cheesecake-eb2ad2.netlify.app/)
 
 ## My process
 
