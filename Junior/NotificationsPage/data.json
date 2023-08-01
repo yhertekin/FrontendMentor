@@ -1,0 +1,25 @@
+[
+    {
+        "profilePicture": "./src/assets/images/avatar-mark-webber.webp",
+        "name": "Mark Webber",
+        "notification": "reacted to your recent post",
+        "time": "1m",
+        "actionText": "My first tournament today!",
+        "read": false
+    },
+    {
+        "profilePicture": "./src/assets/images/avatar-angela-gray.webp",
+        "name": "Angela Gray",
+        "notification": "followed you",
+        "time": "5m",
+        "read": true
+    },
+    {
+        "profilePicture": "./src/assets/images/avatar-jacob-thompson.webp",
+        "name": "Jacob Thompson",
+        "notification": "has joined your group",
+        "actionText": "Chess Club",
+        "time": "1 day",
+        "read": false
+    }
+]

@@ -1,0 +1,45 @@
+.card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: hsla(var(--white));
+    width: 100%;
+}
+.card--unread {
+    background-color: hsla(var(--very-light-grayish-blue), 1);
+}
+.profile-picture {
+    aspect-ratio: 1;
+    width: 2.5rem;
+}
+.card > div {
+    padding: 0 1rem;
+}
+.text {
+    color: hsla(var(--grayish-blue));
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.name {
+    font-weight: bold;
+    color: hsla(var(--very-dark-blue));
+}
+.action-text {
+    font-weight: bold;
+    color: hsla(var(--dark-grayish-blue));
+}
+.read-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: hsla(var(--red), 0.7);
+    display: inline-block;
+    margin-left: 0.3rem;
+}
+.date {
+    color: hsla(var(--grayish-blue), 0.5);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
