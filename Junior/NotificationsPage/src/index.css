@@ -21,14 +21,10 @@
     --dark-grayish-blue: 219, 12%, 42%;
     --very-dark-blue: 224, 21%, 14%;
 
-    --primary: white;
-    --padding: 4rem;
     /* Typography */
 
     --font-family: PlusJakartaSans, sans-serif;
     --font-size: 16px;
-
-    --primary-bg: blue;
 }
 
 * {
@@ -51,29 +47,4 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
-}
-
-body {
-    background-color: var(--primary);
-    padding: var(--padding);
-}
-.fs-100 {
-    font-size: 1rem;
-}
-.fs-200 {
-    font-size: 2rem;
-}
-.fs-300 {
-    font-size: 3rem;
-}
-
-.primary {
-    background-color: var(--primary-bg);
-}
-.secondary {
-    background-color: var(--primary-bg);
-}
-
-.dark:root {
-    --primary-bg: red;
 }

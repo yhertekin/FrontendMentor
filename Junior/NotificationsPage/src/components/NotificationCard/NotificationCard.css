@@ -1,5 +1,8 @@
+@import url(./../../index.css);
+
 .card {
     display: flex;
+    gap: 1rem;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 1rem;
@@ -10,17 +13,22 @@
 .card--unread {
     background-color: hsla(var(--very-light-grayish-blue), 1);
 }
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
 .profile-picture {
     aspect-ratio: 1;
     width: 2.5rem;
 }
-.card > div {
-    padding: 0 1rem;
-}
+
 .text {
     color: hsla(var(--grayish-blue));
-    font-size: 0.8rem;
-    font-weight: 600;
+
+    /* font-weight: 600; */
 }
 .name {
     font-weight: bold;
@@ -40,6 +48,25 @@
 }
 .date {
     color: hsla(var(--grayish-blue), 0.5);
-    font-size: 0.8rem;
+
     margin-top: 0.3rem;
+}
+
+.message {
+    margin-top: 1rem;
+    border: 1px solid hsla(var(--light-grayish-blue-2));
+    padding: 1rem;
+    color: hsla(var(--grayish-blue));
+    border-radius: 0.3rem;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.action-image {
+    margin-left: 0.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
