@@ -18,8 +18,20 @@ function App() {
         fetchNotificationData();
     }, []);
 
+    const updateData = () => {
+        setData((prevState) => prevState.map((item) => ({ ...item, read: true })));
+    };
+
     return (
-        <main>{data && data?.map((notification, i) => <NotificationCard key={i} notification={notification} />)}</main>
+        <main>
+            <header>
+                <h1>
+                    Notifications <span>{data?.filter((d) => !d.read).length}</span>
+                </h1>
+                <button onClick={updateData}>Mark all as read</button>
+            </header>
+            {data && data?.map((notification: any, i: any) => <NotificationCard key={i} notification={notification} />)}
+        </main>
     );
 }
 

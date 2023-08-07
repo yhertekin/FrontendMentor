@@ -34,6 +34,7 @@
     font-weight: bold;
     color: hsla(var(--very-dark-blue));
 }
+
 .action-text {
     font-weight: bold;
     color: hsla(var(--dark-grayish-blue));
@@ -69,4 +70,17 @@
     margin-left: 0.3rem;
     width: 2.5rem;
     height: 2.5rem;
+}
+
+.name:hover,
+.action-text:hover {
+    color: hsla(var(--blue));
+}
+
+.action-image:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.message:hover {
+    background-color: hsla(var(--light-grayish-blue-1), 1);
 }

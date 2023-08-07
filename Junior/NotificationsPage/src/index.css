@@ -35,6 +35,11 @@
 
 body {
     font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(var(--very-light-grayish-blue));
+    min-height: 100vh;
 }
 img {
     display: block;
@@ -47,4 +52,40 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
+    max-width: 800px;
+    background-color: hsla(var(--white));
+    border-radius: 0.7rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header > h1 {
+    font-size: 1.3rem;
+}
+
+header > h1 > span {
+    color: hsla(var(--white));
+    background-color: hsla(var(--blue));
+    border-radius: 5px;
+    padding: 0.1rem 0.7rem;
+}
+
+header > button {
+    border: none;
+    background-color: inherit;
+}
+header > button:hover {
+    cursor: pointer;
+    color: hsla(var(--blue));
+}
+
+@media (max-width: 800px) {
+    header > h1 {
+        font-size: 1rem;
+    }
 }
