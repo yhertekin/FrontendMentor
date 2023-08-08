@@ -19,7 +19,7 @@ function App() {
     const [data, setData] = useState<INotification[]>(initialData);
 
     const fetchNotificationData = () => {
-        fetch("./data.json")
+        fetch("./../data.json")
             .then((response) => {
                 return response.json();
             })
