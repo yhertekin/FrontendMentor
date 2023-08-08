@@ -4,7 +4,7 @@ import { INotification } from "./interfaces/Notification";
 
 const initialData: INotification[] = [
     {
-        profilePicture: "./src/assets/images/avatar-mark-webber.webp",
+        profilePicture: "./assets/images/avatar-mark-webber.webp",
         name: "Mark Webber",
         notificationText: "reacted to your recent post",
         time: "1m",
@@ -12,14 +12,14 @@ const initialData: INotification[] = [
         read: false,
     },
     {
-        profilePicture: "./src/assets/images/avatar-angela-gray.webp",
+        profilePicture: "./assets/images/avatar-angela-gray.webp",
         name: "Angela Gray",
         notificationText: "followed you",
         time: "5m",
         read: false,
     },
     {
-        profilePicture: "./src/assets/images/avatar-jacob-thompson.webp",
+        profilePicture: "./assets/images/avatar-jacob-thompson.webp",
         name: "Jacob Thompson",
         notificationText: "has joined your group",
         actionText: "Chess Club",
@@ -27,7 +27,7 @@ const initialData: INotification[] = [
         read: false,
     },
     {
-        profilePicture: "./src/assets/images/avatar-rizky-hasanuddin.webp",
+        profilePicture: "./assets/images/avatar-rizky-hasanuddin.webp",
         name: "Rizky Hasanuddin",
         notificationText: "sent you a private message",
         message:
@@ -36,15 +36,15 @@ const initialData: INotification[] = [
         read: true,
     },
     {
-        profilePicture: "./src/assets/images/avatar-kimberly-smith.webp",
+        profilePicture: "./assets/images/avatar-kimberly-smith.webp",
         name: "Kimberly Smith",
         notificationText: "commented on your picture",
-        actionImage: "./src/assets/images/image-chess.webp",
+        actionImage: "./assets/images/image-chess.webp",
         time: "1 week",
         read: true,
     },
     {
-        profilePicture: "./src/assets/images/avatar-nathan-peterson.webp",
+        profilePicture: "./assets/images/avatar-nathan-peterson.webp",
         name: "Nathan Peterson",
         notificationText: "reacted to your recent post",
         actionText: "5 end-game strategies to increase your win rate",
@@ -52,7 +52,7 @@ const initialData: INotification[] = [
         read: true,
     },
     {
-        profilePicture: "./src/assets/images/avatar-anna-kim.webp",
+        profilePicture: "./assets/images/avatar-anna-kim.webp",
         name: "Anna Kim",
         notificationText: "left the group",
         actionText: "Chess Club",
