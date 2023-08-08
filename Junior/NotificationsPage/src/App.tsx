@@ -1,8 +1,22 @@
 import { useEffect, useState } from "react";
 import NotificationCard from "./components/NotificationCard";
+import { INotification } from "./interfaces/Notification";
+
+const initialData: INotification[] = [
+    {
+        profilePicture: "",
+        name: "",
+        notificationText: "",
+        actionText: "",
+        time: "",
+        read: false,
+        message: "",
+        actionImage: "",
+    },
+];
 
 function App() {
-    const [data, setData] = useState();
+    const [data, setData] = useState<INotification[]>(initialData);
 
     const fetchNotificationData = () => {
         fetch("./data.json")

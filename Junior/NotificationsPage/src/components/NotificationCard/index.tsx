@@ -1,19 +1,9 @@
 import React from "react";
 import "./NotificationCard.css";
+import { INotification } from "../../interfaces/Notification";
 
 interface INotificationCard {
     notification: INotification;
-}
-
-interface INotification {
-    profilePicture: string;
-    name: string;
-    notificationText: string;
-    time: string;
-    read: boolean;
-    actionText?: string;
-    actionImage?: string;
-    message?: string;
 }
 
 const NotificationCard = ({ notification }: INotificationCard) => {
