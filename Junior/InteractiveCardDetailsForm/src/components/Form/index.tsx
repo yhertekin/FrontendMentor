@@ -1,38 +1,21 @@
 import { useState } from "react";
 import Input from "./Input";
+import { IForm } from "../../App";
 
-interface IForm {
-    cardholderName: string;
-    cardNumber: number;
-    month: number;
-    year: number;
-    cvc: number;
+interface FormProps {
+    data: IForm;
+    setData: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const initialForm = {
-    cardholderName: "",
-    cardNumber: 0,
-    month: 0,
-    year: 0,
-    cvc: 0,
-};
-
-const Form = () => {
-    const [form, setForm] = useState<IForm>({} as IForm);
-
-    const formChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setForm((prevState: IForm) => ({ ...prevState, [e.target.name]: e.target.value }));
-        console.log("as");
-    };
-
+const Form = ({ data, setData }: FormProps) => {
     return (
         <div className='w-full p-4 flex gap-4 flex-col'>
             <Input
                 placeholder='e.g. Jane Appleseed'
                 label='Cardholder name'
                 type='text'
-                value={form.cardholderName}
-                onChange={formChangeHandler}
+                value={data.cardholderName}
+                onChange={setData}
                 name='cardholderName'
             />
             <Input
@@ -40,8 +23,8 @@ const Form = () => {
                 label='Card number'
                 type='number'
                 name='cardNumber'
-                value={form.cardNumber}
-                onChange={formChangeHandler}
+                value={data.cardNumber}
+                onChange={setData}
             />
             <div className='flex items-end gap-2'>
                 <div className=''>
@@ -55,7 +38,7 @@ const Form = () => {
                 </div>
                 <Input placeholder='e.g. 123' label='cvc' type='number' />
             </div>
-            <button className='btn capitalize'>Confirm</button>
+            <button className='btn text-white bg-violet-500 tracking-widest font-normal capitalize'>Confirm</button>
         </div>
     );
 };

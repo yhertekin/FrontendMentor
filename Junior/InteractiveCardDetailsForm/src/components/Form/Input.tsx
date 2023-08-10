@@ -1,5 +1,4 @@
 interface InputProps {
-    placeholder: string;
     label?: string;
     type: "text" | "number";
 }

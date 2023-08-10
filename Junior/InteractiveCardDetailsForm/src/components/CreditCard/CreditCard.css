@@ -1,0 +1,15 @@
+.credit-card-container {
+    @apply bg-card-mobile relative w-full h-52 mb-16 md:bg-card-desktop;
+}
+
+.credit-card {
+    @apply absolute bg-cover bg-center rounded-md w-72 h-36;
+}
+
+.credit-card--front {
+    @apply bg-card-front top-28 left-4;
+}
+
+.credit-card--back {
+    @apply bg-card-back top-6 right-4;
+}

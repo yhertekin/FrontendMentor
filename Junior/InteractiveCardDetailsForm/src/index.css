@@ -9,3 +9,7 @@
 *::after {
     @apply font-primary p-0 m-0;
 }
+
+img {
+    display: block;
+}
