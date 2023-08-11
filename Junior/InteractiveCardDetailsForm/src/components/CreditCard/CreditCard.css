@@ -1,15 +1,60 @@
 .credit-card-container {
-    @apply bg-card-mobile relative w-full h-52 mb-16 md:bg-card-desktop;
+    @apply bg-card-mobile bg-cover relative w-full h-52 mb-32 text-white;
 }
 
 .credit-card {
-    @apply absolute bg-cover bg-center rounded-md w-72 h-36;
+    @apply absolute bg-cover bg-center rounded-md min-w-[300px] min-h-[175px];
 }
 
 .credit-card--front {
-    @apply bg-card-front top-28 left-4;
+    @apply bg-card-front top-32 left-[5vw];
 }
 
 .credit-card--back {
-    @apply bg-card-back top-6 right-4;
+    @apply bg-card-back top-6 right-[5vw];
+}
+
+.card-number,
+.cardholder-name,
+.exp-date,
+.cvc-number {
+    @apply tracking-widest absolute bottom-6 right-6 text-xs;
+}
+
+.card-number {
+    @apply bottom-14 left-6 right-4 text-lg;
+}
+.cardholder-name {
+    @apply bottom-6 left-6;
+}
+.exp-date {
+    @apply bottom-6 right-6;
+}
+
+.cvc-number {
+    @apply top-20 right-12;
+}
+.card-logo {
+    @apply pl-6 pt-4;
+}
+
+@screen md {
+    .credit-card-container {
+        @apply bg-card-desktop flex items-center justify-center w-[40vw] h-[100vh] mb-0;
+    }
+    .credit-card--front {
+        @apply top-[30vh] left-2;
+    }
+    .credit-card--back {
+        @apply top-[50vh] left-2 mt-8;
+    }
+}
+
+@screen lg {
+    .credit-card--front {
+        @apply left-[12vw];
+    }
+    .credit-card--back {
+        @apply left-[15vw];
+    }
 }
