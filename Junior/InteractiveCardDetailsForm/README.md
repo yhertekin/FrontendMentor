@@ -34,8 +34,8 @@ phs above when you add your screenshot. If you prefer not to add a screenshot, f
 
 ### Links
 
--   Solution URL: [Code]()
--   Live Site URL: [Live]()
+-   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Junior/InteractiveCardDetailsForm)
+-   Live Site URL: [Live](https://main--tiny-jalebi-8fde97.netlify.app/)
 
 ## My process
 
