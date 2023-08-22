@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Code]()
--   Live Site URL: [Live]()
+-   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Junior/ExpensesChartComponent)
+-   Live Site URL: [Live](https://poetic-seahorse-bf063f.netlify.app/)
 
 ## My process
 
