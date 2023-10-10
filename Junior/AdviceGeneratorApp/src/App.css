@@ -1,0 +1,49 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: hsl(var(--dark-grayish-blue));
+	border-radius: 0.7rem;
+	padding: 2rem;
+	max-width: 500px;
+	position: relative;
+}
+
+.card__id {
+	color: hsl(var(--neon-green));
+	text-transform: uppercase;
+	font-size: 0.6rem;
+	letter-spacing: 0.3rem;
+}
+.card__advice {
+	text-align: center;
+	color: hsl(var(--light-cyan));
+	margin: 1rem 0;
+	line-height: 35px;
+}
+.card__advice::before,
+.card__advice::after {
+	content: '"';
+}
+
+.card__divider {
+	margin-bottom: 1rem;
+}
+.card__button {
+	border: none;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: -1.5rem;
+	background-color: hsl(var(--neon-green));
+}
+
+.card__button:hover,
+.card__button:active {
+	filter: drop-shadow(0px 0px 5px #52ffa8);
+	cursor: pointer;
+}
