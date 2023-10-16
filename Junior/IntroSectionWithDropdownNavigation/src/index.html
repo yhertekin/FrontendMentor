@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/dist/output.css" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <nav></nav>
-        </header>
-    </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Intro Section With Dropdown Navigation</title>
+		<link href="/dist/output.css" rel="stylesheet" />
+	</head>
+	<body class="bg-white font-epilogue">
+		<header class="flex justify-between items-center p-4">
+			<img src="/assets/logo.svg" alt="logo" />
+			<img class="toggle-menu" src="/assets/icon-menu.svg" alt="" />
+			<nav class="menu hidden fixed top-0 right-0 bottom-0 bg-red-500">
+				<ul>
+					<li>afda</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<img src="/assets/image-hero-mobile.png" alt="hero" />
+			</section>
+			<section class="flex flex-col items-center p-4">
+				<h1 class="font-bold text-3xl my-6">Make remote work</h1>
+				<p class="text-center text-gray">
+					Get your team in sync, no matter your location. Streamline processes, create team rituals,
+					and watch productivity soar.
+				</p>
+				<button class="font-bold mt-6 rounded-xl bg-black text-white py-2 px-4">Learn More</button>
+			</section>
+		</main>
+		<footer class="flex justify-between items-center p-4">
+			<img src="/assets/client-databiz.svg" alt="client-databiz" />
+			<img src="/assets/client-audiophile.svg" alt="client-audiophile" />
+			<img src="/assets/client-meet.svg" alt="client-meet" />
+			<img src="/assets/client-maker.svg" alt="client-maker" />
+		</footer>
+		<script src="app.js"></script>
+	</body>
 </html>
