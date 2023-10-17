@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
+import Card from "./components/Card";
+import Work from "./assets/icon-work.svg";
+import Play from "./assets/icon-play.svg";
+import Study from "./assets/icon-study.svg";
+import Exercise from "./assets/icon-exercise.svg";
+import Social from "./assets/icon-social.svg";
+import SelfCare from "./assets/icon-self-care.svg";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+import data from "./data.json";
+import Person from "./components/Person";
+
+interface IIcons {
+    [key: string]: string;
 }
 
-export default App
+const icons: IIcons = {
+    Work,
+    Study,
+    Play,
+    Exercise,
+    Social,
+    "Self Care": SelfCare,
+};
+
+export type TPeriod = "daily" | "weekly" | "monthly";
+
+function App() {
+    const [period, setPeriod] = useState<TPeriod>("daily");
+
+    return (
+        <div className='w-[calc(100vw-1.5rem)] max-w-[1000px] grid gap-6 p-4 sm:grid-cols-4 sm:grid-rows-2'>
+            <Person period={period} setPeriod={setPeriod} />
+            {data &&
+                data.map((item) => (
+                    <div key={item.title}>
+                        <Card title={item.title} icon={icons[item.title]} timeFrame={item.timeframes[period]} />
+                    </div>
+                ))}
+        </div>
+    );
+}
+
+export default App;
