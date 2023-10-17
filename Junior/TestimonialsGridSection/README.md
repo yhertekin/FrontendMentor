@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Code]
--   Live Site URL: [Live]
+-   Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Junior/TestimonialsGridSection)
+-   Live Site URL: [Live](https://main--exquisite-granita-3c01d4.netlify.app/)
 
 ## My process
 
