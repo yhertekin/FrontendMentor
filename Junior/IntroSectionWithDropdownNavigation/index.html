@@ -1,45 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="output.css" />
-		<title>Document</title>
-	</head>
-	<body class="">
-		<header>
-			<div class="flex justify-between items-center px-4 py-6">
-				<img class="" src="/assets/logo.svg" alt="company logo" />
-				<img class="pb-[7px]" src="/assets/icon-menu.svg" alt="menu icon" />
-			</div>
-			<nav>
-				<ul>
-					<li></li>
-				</ul>
-			</nav>
-		</header>
-		<main class="w-full">
-			<section>
-				<img src="/assets/image-hero-mobile.png" alt="hero image" />
-			</section>
-			<section class="text-center">
-				<h1 class="text-[35px] font-bold mt-[41px]">Make remote work</h1>
-				<p class="text-medium-gray font-medium text-[16px] leading-[26px] py-[12px] px-[10px]">
-					Get your team in sync, no matter your location. Streamline processes, create team rituals,
-					and watch productivity soar.
-				</p>
-				<button
-					class="bg-almost-black text-almost-white font-bold text-[16px] mt-[11px] py-[12px] px-[22px] rounded-[16px]"
-				>
-					Learn more
-				</button>
-			</section>
-			<section class="flex items-center justify-evenly w-full mt-[20px]">
-				<img class="w-[80px]" src="/assets/client-databiz.svg" alt="databiz" />
-				<img class="w-[56px]" src="/assets/client-audiophile.svg" alt="audiophile" />
-				<img class="w-[76px]" src="/assets/client-meet.svg" alt="meet" />
-				<img class="w-[60px]" src="/assets/client-maker.svg" alt="maker" />
-			</section>
-		</main>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="output.css" />
+        <title>Document</title>
+    </head>
+    <body class="">
+        <header>
+            <div class="flex justify-between items-center px-4 py-6">
+                <img class="" src="/assets/logo.svg" alt="company logo" />
+                <img class="toggle-menu" class="pb-[7px]" src="/assets/icon-menu.svg" alt="menu icon" />
+            </div>
+            <nav
+                class="menu translate-x-full duration-100 transition-all opacity-0 fixed top-0 left-0 right-0 -bottom-1 bg-almost-black/[0.75]"
+            >
+                <div class="absolute right-0 top-0 -bottom-1 w-[240px] bg-almost-white">
+                    <img
+                        class="toggle-menu ml-auto mt-5 mr-5"
+                        src="/assets/icon-close-menu.svg"
+                        alt="menu close icon"
+                    />
+                    <ul class="mt-6 ml-6">
+                        <li class="py-[9px]">
+                            <div class="flex items-center features">
+                                Features
+                                <img
+                                    class="ml-[15px] features-icon"
+                                    src="/assets/icon-arrow-down.svg"
+                                    alt="arrow icon"
+                                />
+                            </div>
+                            <ul class="py-[8px] pl-[23px] features-menu hidden">
+                                <li class="flex items-center pt-[18px] pl-[1px]">
+                                    <img class="w-[17px] mr-[16px]" src="/assets/icon-todo.svg" alt="todo" />Todo List
+                                </li>
+                                <li class="flex items-center pt-[18px]">
+                                    <img
+                                        class="w-[20px] mr-[13px]"
+                                        src="/assets/icon-calendar.svg"
+                                        alt="calendar"
+                                    />Calendar
+                                </li>
+                                <li class="flex items-center pt-[18px] pl-[2px]">
+                                    <img
+                                        class="w-[17px] mr-[15px]"
+                                        src="/assets/icon-reminders.svg"
+                                        alt="reminders"
+                                    />Reminders
+                                </li>
+                                <li class="flex items-center pt-[18px] pl-[1px]">
+                                    <img
+                                        class="w-[20px] mr-[12px]"
+                                        src="/assets/icon-planning.svg"
+                                        alt="planning"
+                                    />Planning
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="py-[9px]">
+                            <div class="flex items-center company">
+                                Company
+                                <img class="ml-[15px] company-icon" src="/assets/icon-arrow-down.svg" alt="" />
+                            </div>
+
+                            <ul class="py-[8px] pl-[24px] company-menu hidden">
+                                <li class="flex items-center pt-[12px]">History</li>
+                                <li class="flex items-center pt-[18px]">Our Team</li>
+                                <li class="flex items-center pt-[18px]">Blog</li>
+                            </ul>
+                        </li>
+                        <li class="py-[9px] flex items-center">Careers</li>
+                        <li class="py-[9px] flex items-center">About</li>
+                    </ul>
+                    <div class="flex flex-col items-center mt-[13px]">
+                        <button class="py-[8px] my-[2px] text-[14px]">Login</button>
+                        <button
+                            class="py-[9px] px-[67px] my-[3px] text-[14px] ml-[3px] rounded-[12px] border border-almost-black"
+                        >
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="w-full">
+            <section>
+                <img src="/assets/image-hero-mobile.png" alt="hero image" />
+            </section>
+            <section class="text-center">
+                <h1 class="text-[35px] font-bold mt-[41px]">Make remote work</h1>
+                <p class="text-medium-gray font-medium text-[16px] leading-[26px] py-[12px] px-[10px]">
+                    Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+                    productivity soar.
+                </p>
+                <button
+                    class="bg-almost-black text-almost-white font-bold text-[16px] mt-[11px] py-[12px] px-[22px] rounded-[16px]"
+                >
+                    Learn more
+                </button>
+            </section>
+            <section class="flex items-center justify-between w-full my-[48px] px-[16px]">
+                <img class="w-[82px]" src="/assets/client-databiz.svg" alt="databiz" />
+                <img class="w-[54px]" src="/assets/client-audiophile.svg" alt="audiophile" />
+                <img class="w-[64px]" src="/assets/client-meet.svg" alt="meet" />
+                <img class="w-[60px]" src="/assets/client-maker.svg" alt="maker" />
+            </section>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
 </html>
