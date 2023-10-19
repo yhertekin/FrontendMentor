@@ -8,6 +8,67 @@
 	body {
 		@apply font-epilogue;
 	}
+
+	header {
+		@apply flex justify-between items-center px-4 py-6;
+
+		.toggle-menu {
+			@apply pb-[7px];
+		}
+	}
+
+	main {
+		@apply w-full;
+
+		.title {
+			@apply text-[35px] font-bold mt-[41px];
+		}
+		.text {
+			@apply text-medium-gray font-medium text-[16px] leading-[26px] py-[12px] px-[10px];
+		}
+
+		.learn-more {
+			@apply bg-almost-black text-almost-white font-bold text-[16px] mt-[11px] py-[12px] px-[22px] rounded-[16px];
+		}
+
+		.clients {
+			@apply flex items-center justify-between w-full my-[48px] px-[16px];
+		}
+	}
 }
 
+@media screen(sm) {
+	.toggle-menu {
+		@apply hidden;
+	}
 
+	.menu-mobile {
+		@apply hidden;
+	}
+
+	main {
+		@apply flex flex-row-reverse py-[56px] px-[130px] gap-[119px];
+
+		.hero {
+			@apply w-[480px];
+		}
+
+		.content {
+			@apply px-[35px] pt-[62px];
+		}
+
+		.title {
+			@apply text-[78px] leading-[80px];
+		}
+
+		.text {
+			@apply max-w-[430px] mt-[38px] px-0 tracking-[1px] leading-[27px];
+		}
+		.learn-more {
+			@apply mt-[40px] text-[17px] pt-[18px] pb-[12px] px-[33px];
+		}
+		.clients {
+			@apply mt-[112px] px-0;
+		}
+	}
+}
