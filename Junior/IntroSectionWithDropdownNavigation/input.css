@@ -46,8 +46,12 @@
 		@apply hidden;
 	}
 
+	header {
+		@apply justify-start py-[22px] px-[41px];
+	}
+
 	main {
-		@apply flex flex-row-reverse py-[56px] px-[130px] gap-[119px];
+		@apply flex flex-row-reverse py-[44px] px-[130px] gap-[119px];
 
 		.hero {
 			@apply w-[480px];
