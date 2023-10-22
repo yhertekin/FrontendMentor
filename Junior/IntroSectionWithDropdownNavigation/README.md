@@ -30,18 +30,19 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code]()
-- Live Site URL: [Live]()
+- Solution URL: [Code](https://github.com/yhertekin/FrontendMentor/tree/main/Junior/IntroSectionWithDropdownNavigation)
+- Live Site URL: [Live](https://main--sage-smakager-a2799a.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- CSS custom properties
+- Tailwind custom properties
 - Flexbox
 - Mobile-first workflow
-- React.js
-- Vite
+- JavaScript
+- HTML5 Semantic markup
+- Tailwind
 
 ## Author
 
