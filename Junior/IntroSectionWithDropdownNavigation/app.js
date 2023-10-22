@@ -8,28 +8,23 @@ toggleMenu.forEach((btn) =>
 	})
 );
 
-const features = document.querySelector(".features");
-const featuresMenu = document.querySelector(".features-menu");
-const featuresIcon = document.querySelector(".features-icon");
+const handleDropdown = (btnClass, btnIconClass, btnMenuClass) => {
+	console.log("hello");
+	const btn = document.querySelector(`.${btnClass}`);
+	const btnIcon = document.querySelector(`.${btnIconClass}`);
+	const btnMenu = document.querySelector(`.${btnMenuClass}`);
 
-features.addEventListener("click", () => {
-	featuresMenu.classList.toggle("hidden");
-	if (featuresMenu.classList.contains("hidden")) {
-		featuresIcon.src = "/assets/icon-arrow-down.svg";
-	} else {
-		featuresIcon.src = "/assets/icon-arrow-up.svg";
-	}
-});
+	btn.addEventListener("click", () => {
+		btnMenu.classList.toggle("hidden");
+		if (btnMenu.classList.contains("hidden")) {
+			btnIcon.src = "/assets/icon-arrow-down.svg";
+		} else {
+			btnIcon.src = "/assets/icon-arrow-up.svg";
+		}
+	});
+};
 
-const company = document.querySelector(".company");
-const companyMenu = document.querySelector(".company-menu");
-const companyIcon = document.querySelector(".company-icon");
-
-company.addEventListener("click", () => {
-	companyMenu.classList.toggle("hidden");
-	if (companyMenu.classList.contains("hidden")) {
-		companyIcon.src = "/assets/icon-arrow-down.svg";
-	} else {
-		companyIcon.src = "/assets/icon-arrow-up.svg";
-	}
-});
+handleDropdown("company", "company-icon", "company-menu");
+handleDropdown("features", "features-icon", "features-menu");
+handleDropdown("company-mobile", "company-icon-mobile", "company-menu-mobile");
+handleDropdown("features-mobile", "features-icon-mobile", "features-menu-mobile");
