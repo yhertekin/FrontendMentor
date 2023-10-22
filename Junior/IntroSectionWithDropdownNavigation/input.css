@@ -6,7 +6,7 @@
 
 @layer components {
 	body {
-		@apply font-epilogue;
+		@apply font-epilogue bg-almost-white;
 	}
 
 	header {
@@ -35,6 +35,25 @@
 			@apply flex items-center justify-between w-full my-[48px] px-[16px];
 		}
 	}
+}
+
+li,
+.login,
+.register {
+	@apply text-medium-gray;
+}
+li:hover,
+.login:hover,
+.register:hover {
+	@apply text-almost-black cursor-pointer;
+}
+
+.register:hover {
+	@apply border-almost-black;
+}
+
+.learn-more:hover {
+	@apply border border-almost-black bg-almost-white text-almost-black;
 }
 
 @media screen(sm) {
